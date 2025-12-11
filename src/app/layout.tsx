@@ -13,21 +13,21 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "知象数据 - 为知识产权全链条激活数据价值 | AI数据服务平台",
-  description: "知象数据专注于为知识产权全产业链提供专业的数据服务和智能解决方案。服务政府机关、保护中心、产业园区、代理机构，提供数智研判、智慧监管、海外保护、产业导航等关键场景解决方案。依托政府权威开放数据库，遵循国家信息安全和数据安全标准，为客户提供低成本、高实效的数据服务。",
-  keywords: ["知识产权", "数据服务", "知象数据", "AI数据平台", "专利数据", "商标数据", "版权保护", "数智研判", "智慧监管", "海外保护", "产业导航", "数据治理", "数据安全"],
-  authors: [{ name: "Zhixiang Data" }],
+  title: "儿童故事屋 | 双语睡前故事与语音朗读",
+  description: "儿童故事屋提供双语睡前故事、语音朗读与安全无广告的阅读体验，陪伴孩子快乐成长，学习勇气、友爱与分享。",
+  keywords: ["儿童故事", "睡前故事", "双语故事", "亲子阅读", "语音朗读", "儿童寓言", "儿童教育"],
+  authors: [{ name: "Kids Story House" }],
   icons: {
     icon: "/favicon.png",
     shortcut: "/favicon.png",
     apple: "/favicon.png",
   },
   openGraph: {
-    title: "知象数据 - 为知识产权全链条激活数据价值",
-    description: "专业的知识产权数据服务商 | AI驱动 | 权威数据源 | 安全合规 | 智能应用",
-    url: "https://www.zhixiang-data.com",
-    siteName: "知象数据",
-    locale: "zh_CN",
+    title: "儿童故事屋 | 双语睡前故事",
+    description: "双语睡前故事 · 语音朗读 · 安全无广告 · 适合3-8岁儿童",
+    url: "https://demo-ai-site.vercel.app",
+    siteName: "儿童故事屋",
+    locale: "zh-CN",
     type: "website",
   },
 };
