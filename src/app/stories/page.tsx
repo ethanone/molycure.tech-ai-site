@@ -32,13 +32,13 @@ const staggerContainer = {
 
 // Hero Section
 const StoriesHero = memo(({ language }: { language: string }) => (
-  <div className="relative min-h-[60vh] flex items-center justify-center bg-gradient-to-br from-pink-100 via-purple-100 to-blue-100 overflow-hidden">
+  <div className="relative min-h-[60vh] flex items-center justify-center bg-gradient-to-br from-blue-50 via-cyan-50 to-slate-100 overflow-hidden">
     {/* 背景装饰 */}
     <div className="absolute inset-0 opacity-20">
-      <div className="absolute top-20 left-20 text-9xl">📚</div>
-      <div className="absolute top-40 right-32 text-7xl">✨</div>
-      <div className="absolute bottom-32 left-1/4 text-8xl">🌟</div>
-      <div className="absolute bottom-20 right-20 text-6xl">🎈</div>
+      <div className="absolute top-16 left-16 text-8xl">🤖</div>
+      <div className="absolute top-24 right-32 text-7xl">🌐</div>
+      <div className="absolute bottom-32 left-1/4 text-7xl">📈</div>
+      <div className="absolute bottom-16 right-20 text-6xl">🛡️</div>
     </div>
 
     <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
@@ -55,28 +55,28 @@ const StoriesHero = memo(({ language }: { language: string }) => (
           }}
           className="text-8xl mb-8"
         >
-          🌙
+          🚀
         </motion.div>
-        <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
-          {language === 'zh' ? '山月集文创工作室' : 'Shanyue Cultural Studio'}
+        <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-700 via-cyan-600 to-teal-600 bg-clip-text text-transparent">
+          {language === 'zh' ? '魔力奇全球出海案例库' : 'Molycure Global Expansion Library'}
         </h1>
         <p className="text-xl sm:text-2xl text-gray-700 mb-8 font-medium">
           {language === 'zh' 
-            ? '自然美学 x 传统文化，为年轻人打造可使用、可收藏、可分享的文创产品'
-            : 'Nature aesthetics meets heritage, crafting useful, collectible, shareable goods for young creators'}
+            ? '新加坡背景的AI智能体，为企业提供市场洞察、智能拓客、多语沟通、合规风控与运营协同的一站式出海方案。'
+            : 'Singapore-based AI agents delivering market intel, smart acquisition, multilingual CX, compliance, and ops alignment for fast GTM abroad.'}
         </p>
         <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-600">
           <div className="flex items-center gap-2">
-            <Sparkles className="w-5 h-5 text-purple-500" />
-            <span>{language === 'zh' ? '精选产品线' : 'Curated lines'}</span>
+            <Sparkles className="w-5 h-5 text-blue-600" />
+            <span>{language === 'zh' ? '多智能体协同' : 'Multi-agent orchestration'}</span>
           </div>
           <div className="flex items-center gap-2">
-            <BookOpen className="w-5 h-5 text-blue-500" />
-            <span>{language === 'zh' ? '自然与文化' : 'Nature & culture'}</span>
+            <BookOpen className="w-5 h-5 text-cyan-600" />
+            <span>{language === 'zh' ? '合规与风控内置' : 'Compliance built-in'}</span>
           </div>
           <div className="flex items-center gap-2">
-            <Users className="w-5 h-5 text-pink-500" />
-            <span>{language === 'zh' ? '12人团队·成都' : '12-person team · Chengdu'}</span>
+            <Users className="w-5 h-5 text-teal-600" />
+            <span>{language === 'zh' ? '总部新加坡 · 面向全球' : 'HQ Singapore · global reach'}</span>
           </div>
         </div>
       </motion.div>
@@ -89,21 +89,19 @@ StoriesHero.displayName = "StoriesHero";
 // Story Card Component
 const StoryCard = memo(({ story, language }: { story: Story; language: string }) => {
   const categoryColors: Record<string, string> = {
-    "友谊": "from-pink-500 to-rose-500",
-    "Friendship": "from-pink-500 to-rose-500",
-    "勇气": "from-blue-500 to-cyan-500",
-    "Courage": "from-blue-500 to-cyan-500",
-    "承诺": "from-purple-500 to-indigo-500",
-    "Promise": "from-purple-500 to-indigo-500",
-    "梦想": "from-yellow-500 to-orange-500",
-    "Dreams": "from-yellow-500 to-orange-500",
+    "智能获客": "from-blue-600 to-cyan-600",
+    "Acquisition": "from-blue-600 to-cyan-600",
+    "多语沟通": "from-teal-600 to-emerald-500",
+    "Multilingual": "from-teal-600 to-emerald-500",
+    "运营协同": "from-indigo-600 to-blue-500",
+    "Ops Sync": "from-indigo-600 to-blue-500",
   };
 
   const categoryColor = categoryColors[story.category[language as 'zh' | 'en']] || "from-gray-500 to-gray-600";
 
   return (
     <motion.div variants={fadeInUp}>
-      <Card className="h-full bg-white hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-purple-300 group">
+      <Card className="h-full bg-white hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-blue-200 group">
         <CardHeader className="p-0">
           <div className={`relative h-48 bg-gradient-to-br ${categoryColor} flex items-center justify-center overflow-hidden`}>
             <div className="absolute inset-0 bg-black/10"></div>
@@ -129,7 +127,7 @@ const StoryCard = memo(({ story, language }: { story: Story; language: string })
           </div>
         </CardHeader>
         <CardContent className="p-6">
-          <CardTitle className="text-2xl font-bold mb-3 text-gray-800 group-hover:text-purple-600 transition-colors">
+          <CardTitle className="text-2xl font-bold mb-3 text-gray-800 group-hover:text-blue-700 transition-colors">
             {story.title[language as 'zh' | 'en']}
           </CardTitle>
           <p className="text-gray-600 mb-4 leading-relaxed line-clamp-3">
@@ -138,7 +136,7 @@ const StoryCard = memo(({ story, language }: { story: Story; language: string })
           <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
             <div className="flex items-center gap-1">
               <Users className="w-4 h-4" />
-              <span>{language === 'zh' ? '适用' : 'For'} {story.ageRange}</span>
+              <span>{language === 'zh' ? '场景' : 'Fit'} {story.ageRange}</span>
             </div>
             <div className="flex items-center gap-1">
               <Clock className="w-4 h-4" />
@@ -147,10 +145,10 @@ const StoryCard = memo(({ story, language }: { story: Story; language: string })
           </div>
           <Button 
             asChild
-            className="w-full bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white border-0 group/btn"
+            className="w-full bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white border-0 group/btn"
           >
             <Link href={`/stories/${story.id}`} className="flex items-center justify-center gap-2">
-              <span>{language === 'zh' ? '开始阅读' : 'Start Reading'}</span>
+              <span>{language === 'zh' ? '查看案例' : 'View Case'}</span>
               <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
             </Link>
           </Button>
@@ -172,19 +170,19 @@ export default function StoriesPage() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-white to-purple-50">
+    <main className="min-h-screen bg-gradient-to-b from-white to-blue-50">
       <StoriesHero language={language} />
       
       <section className="py-16 px-4 sm:px-6 md:px-8 lg:px-12">
         <div className="container mx-auto max-w-7xl">
           <motion.div {...fadeInUp} className="text-center mb-12">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
-              {language === 'zh' ? '产品系列' : 'Product Lines'}
+            <h2 className="text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-700 to-teal-600 bg-clip-text text-transparent">
+              {language === 'zh' ? '核心解决方案与案例' : 'Core Solutions & Case Studies'}
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               {language === 'zh' 
-                ? '每件产品都带着自然与文化的灵感，既能日常使用，也值得收藏与分享。' 
-                : 'Each piece carries nature and cultural inspiration—made to use daily, keep, and share.'}
+                ? '聚焦市场洞察、智能拓客、多语沟通、合规风控与运营协同，展示魔力奇智能体在全球落地的实效。' 
+                : 'Focused on market intelligence, acquisition, multilingual CX, compliance, and ops sync—showcasing real outcomes from Molycure agents worldwide.'}
             </p>
           </motion.div>
 
@@ -203,13 +201,13 @@ export default function StoriesPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gradient-to-r from-pink-500 to-purple-500 text-white py-8 mt-16">
+      <footer className="bg-gradient-to-r from-blue-700 via-cyan-700 to-teal-700 text-white py-8 mt-16">
         <div className="container mx-auto max-w-7xl px-4 text-center">
           <p className="text-lg font-medium mb-2">
-            {language === 'zh' ? '让自然与文化点亮你的日常' : 'Let nature and culture brighten your daily life'}
+            {language === 'zh' ? '用AI智能体，帮助企业低成本高效率出海' : 'AI agents to help you expand globally with speed and efficiency'}
           </p>
           <p className="text-sm opacity-90">
-            {language === 'zh' ? '山月集文创工作室 · 创始人林一一 · 12人团队 · 成都' : 'Shanyue Studio · Founder Lin Yiyi · 12-person team · Chengdu'}
+            {language === 'zh' ? '新加坡总部 · 服务全球市场 · 欢迎联系获取定制方案' : 'HQ Singapore · Serving global markets · Contact for a tailored plan'}
           </p>
         </div>
       </footer>

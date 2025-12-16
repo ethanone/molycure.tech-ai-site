@@ -112,14 +112,14 @@ export default function StoryReaderPage() {
 
   if (!story) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-pink-100 to-purple-100">
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-cyan-100">
         <div className="text-center">
           <p className="text-xl text-gray-600 mb-4">
-            {language === 'zh' ? '未找到对应产品' : 'Product not found'}
+            {language === 'zh' ? '未找到对应案例' : 'Case not found'}
           </p>
           <Button asChild>
             <Link href="/stories">
-              {language === 'zh' ? '返回产品系列' : 'Back to Products'}
+              {language === 'zh' ? '返回案例库' : 'Back to Cases'}
             </Link>
           </Button>
         </div>
@@ -132,21 +132,21 @@ export default function StoryReaderPage() {
   const totalPages = content.length;
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50">
+    <main className="min-h-screen bg-gradient-to-br from-blue-50 via-cyan-50 to-slate-50">
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-purple-200 shadow-sm">
+      <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-blue-200 shadow-sm">
         <div className="container mx-auto max-w-4xl px-4 py-4">
           <div className="flex items-center justify-between">
             <Button
               variant="ghost"
               onClick={() => router.push('/stories')}
-              className="flex items-center gap-2 text-purple-600 hover:text-purple-700"
+              className="flex items-center gap-2 text-blue-600 hover:text-blue-700"
             >
               <ArrowLeft className="w-5 h-5" />
-              <span>{language === 'zh' ? '返回产品' : 'Back'}</span>
+              <span>{language === 'zh' ? '返回案例' : 'Back'}</span>
             </Button>
             <Link href="/">
-              <Button variant="ghost" className="flex items-center gap-2 text-purple-600 hover:text-purple-700">
+              <Button variant="ghost" className="flex items-center gap-2 text-blue-600 hover:text-blue-700">
                 <Home className="w-5 h-5" />
                 <span>{language === 'zh' ? '首页' : 'Home'}</span>
               </Button>
@@ -172,15 +172,15 @@ export default function StoryReaderPage() {
           >
             {story.cover}
           </motion.div>
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
+          <h1 className="text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-700 via-cyan-600 to-teal-600 bg-clip-text text-transparent">
             {story.title[language as 'zh' | 'en']}
           </h1>
           <div className="flex items-center justify-center gap-4 text-sm text-gray-600">
-            <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full font-medium">
+            <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-medium">
               {story.category[language as 'zh' | 'en']}
             </span>
             <span>•</span>
-            <span>{language === 'zh' ? '适用' : 'For'} {story.ageRange}</span>
+            <span>{language === 'zh' ? '场景' : 'Fit'} {story.ageRange}</span>
             <span>•</span>
             <span>{story.duration}</span>
           </div>
@@ -193,11 +193,11 @@ export default function StoryReaderPage() {
             {...fadeIn}
             className="mb-8"
           >
-            <Card className="bg-white/90 backdrop-blur-sm border-2 border-purple-200 shadow-xl">
+            <Card className="bg-white/90 backdrop-blur-sm border-2 border-blue-200 shadow-xl">
               <CardContent className="p-8 md:p-12">
                 <div className="text-center mb-6">
-                  <span className="text-sm text-purple-600 font-medium">
-                    {language === 'zh' ? '段落' : 'Section'} {currentPage + 1} / {totalPages}
+                  <span className="text-sm text-blue-600 font-medium">
+                    {language === 'zh' ? '阶段' : 'Step'} {currentPage + 1} / {totalPages}
                   </span>
                 </div>
                 <motion.p
@@ -219,7 +219,7 @@ export default function StoryReaderPage() {
         </AnimatePresence>
 
         {/* Controls */}
-        <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-xl border-2 border-purple-200">
+        <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-xl border-2 border-blue-200">
           {/* Navigation */}
           <div className="flex items-center justify-between mb-6">
             <Button
@@ -242,14 +242,14 @@ export default function StoryReaderPage() {
                 {isMuted ? (
                   <VolumeX className="w-5 h-5 text-gray-600" />
                 ) : (
-                  <Volume2 className="w-5 h-5 text-purple-600" />
+                  <Volume2 className="w-5 h-5 text-blue-600" />
                 )}
               </Button>
               
               <Button
                 onClick={handlePlayPause}
                 size="lg"
-                className="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white rounded-full px-8 py-6 text-lg font-semibold shadow-lg"
+                className="bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white rounded-full px-8 py-6 text-lg font-semibold shadow-lg"
               >
                 {isPlaying ? (
                   <>
@@ -279,7 +279,7 @@ export default function StoryReaderPage() {
           {/* Progress Bar */}
           <div className="w-full bg-gray-200 rounded-full h-3 mb-4 overflow-hidden">
             <motion.div
-              className="bg-gradient-to-r from-pink-500 to-purple-500 h-full rounded-full"
+            className="bg-gradient-to-r from-blue-600 to-teal-600 h-full rounded-full"
               initial={{ width: 0 }}
               animate={{ width: `${((currentPage + 1) / totalPages) * 100}%` }}
               transition={{ duration: 0.3 }}
@@ -292,13 +292,13 @@ export default function StoryReaderPage() {
 
         {/* Story Summary */}
         <motion.div {...fadeIn} className="mt-8">
-          <Card className="bg-gradient-to-br from-purple-100 to-pink-100 border-2 border-purple-200">
+          <Card className="bg-gradient-to-br from-blue-50 to-cyan-50 border-2 border-blue-200">
             <CardContent className="p-6">
               <div className="flex items-start gap-3">
-                <BookOpen className="w-6 h-6 text-purple-600 mt-1 flex-shrink-0" />
+                <BookOpen className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="font-bold text-lg text-gray-800 mb-2">
-                    {language === 'zh' ? '产品灵感' : 'Product Inspiration'}
+                    {language === 'zh' ? '方案要点' : 'Solution Snapshot'}
                   </h3>
                   <p className="text-gray-700 leading-relaxed">
                     {story.summary[language as 'zh' | 'en']}

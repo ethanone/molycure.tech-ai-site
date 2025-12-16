@@ -3,160 +3,108 @@
     {
       "id": "1",
       "title": {
-        "zh": "山月手记 · 古风笔记本",
-        "en": "Shanyue Notebook · Heritage Edition"
+        "zh": "东南亚SaaS出海 · AI拓客加速",
+        "en": "SEA SaaS Expansion · AI Pipeline Boost"
       },
-      "cover": "📔",
+      "cover": "🚀",
       "category": {
-        "zh": "纸品书写",
-        "en": "Writing"
+        "zh": "智能获客",
+        "en": "Acquisition"
       },
-      "ageRange": "适合日常与收藏",
-      "duration": "每日书写",
+      "ageRange": "适用：B2B SaaS / 高客单",
+      "duration": "8 周落地",
       "summary": {
-        "zh": "以竹纤维纸张与水纹封面呈现自然质感，搭配十二节气插画与诗句，兼具书写体验与收藏价值。",
-        "en": "Bamboo-fiber pages with water-pattern cover and seasonal poems bring a tactile, collectible writing experience."
+        "zh": "通过多智能体并行外呼与邮件编排，帮助SaaS客户在新加坡、马来、印尼启动冷启动市场，8周内完成ICP验证与线索翻倍。",
+        "en": "Parallel outreach agents plus adaptive email/drip flows helped a B2B SaaS enter SG/MY/ID, validate ICPs, and double leads in 8 weeks."
       },
       "content": {
         "zh": [
-          "封面采用山水晕染纹理，手感柔和，耐磨抗划。",
-          "内页使用 100g 竹纤维纸张，兼容钢笔、签字笔与毛笔，不易渗透。",
-          "每一月配有节气插画与诗句，让书写伴随时间的流转。",
-          "装订使用德式锁线，可 180° 平摊，方便日常记录。",
-          "附赠山月定制书签与贴纸，增添随身携带的仪式感。",
-          "适合工作笔记、旅行速写、灵感收集，也能作为礼物分享。",
-          "团队与本地手工坊合作，保证纸张环保与可回收包装。",
-          "购买后可提供姓名压印与留言卡片，专属你的书写礼物。"
+          "基于市场语义检索快速生成区域ICP与买家画像，锁定三类优先客群并动态更新名单。",
+          "部署多智能体外呼+邮件协同，自动生成本地化脚本与多语种模板，实时A/B调优开信与回复率。",
+          "接入CRM与Calendly，自动识别高意向线索并触发会议预约，减少人工筛选时间。",
+          "跨团队看板实时展示各渠道进展，销售、运营、产品同步复盘，缩短策略迭代周期。",
+          "合规层面接入Do-Not-Call与退订策略，遵循PDPA/GDPR，避免早期违规风险。",
+          "8周内实现回复率提升2.1倍，合格线索周均增长115%，首批签约来自当地Top3渠道合作伙伴。"
         ],
         "en": [
-          "Water-textured cover with soft touch and scratch resistance.",
-          "100g bamboo-fiber pages handle fountain pens and brushes with minimal bleed.",
-          "Seasonal illustrations and poems accompany each month of writing.",
-          "Sewn binding lays flat for easy daily notes and sketches.",
-          "Includes custom bookmark and stickers for a portable ritual.",
-          "Great for work notes, travel sketches, or as a thoughtful gift.",
-          "Co-created with local workshops using eco-friendly, recyclable packing.",
-          "Optional name debossing and message card for a personal touch."
+          "Semantic market scan produced SEA ICPs and buyer personas, prioritizing three cohorts with dynamic list refresh.",
+          "Multi-agent cold outreach (calls + emails) auto-generated localized scripts/templates, A/B optimizing open/reply rates in real time.",
+          "Synced to CRM and Calendly to flag high-intent leads and trigger meetings automatically, cutting manual triage.",
+          "Shared GTM board aligned sales/ops/product with rapid iteration loops across channels.",
+          "Compliance guardrails applied DNC/unsubscribe rules and PDPA/GDPR checks to avoid early penalties.",
+          "In 8 weeks: replies up 2.1x, qualified leads +115% WoW, first deals closed via a top-3 local channel partner."
         ]
       }
     },
     {
       "id": "2",
       "title": {
-        "zh": "云墨集 · 毛笔书写套装",
-        "en": "Yunmo Brush Writing Set"
+        "zh": "跨境电商品牌 · 多语种智能客服",
+        "en": "Cross-border Brand · Multilingual Smart Care"
       },
-      "cover": "🖌️",
+      "cover": "🌍",
       "category": {
-        "zh": "书法礼盒",
-        "en": "Calligraphy"
+        "zh": "多语沟通",
+        "en": "Multilingual"
       },
-      "ageRange": "礼赠/入门/练习",
-      "duration": "随时练习",
+      "ageRange": "适用：DTC/电商客服",
+      "duration": "4 周上线",
       "summary": {
-        "zh": "含两支软硬兼备的狼毫毛笔、松烟墨、宣纸便笺与便携毛毡，帮助初学者轻松入门。",
-        "en": "Two balanced wolf-hair brushes, pine soot ink, xuan note pads, and portable felt help newcomers start gracefully."
+        "zh": "为跨境品牌搭建24/7多语智能客服与售后流程，覆盖英语、马来语、印尼语、泰语，平均响应时间缩短至30秒。",
+        "en": "24/7 multilingual agents (EN/MS/ID/TH) for a DTC brand cut average response time to 30s and stabilized CSAT in new markets."
       },
       "content": {
         "zh": [
-          "精选双支狼毫，软硬搭配，适合楷书练习与行草体验。",
-          "附小楷临摹卡与拆解教程，帮助零基础理解运笔节奏。",
-          "便携墨汁与小砚台，随时打开即可练习，不受场地限制。",
-          "宣纸便笺 30 张，厚实不洇染，适合练字与写祝福。",
-          "附带折叠毛毡与收纳袋，轻松收拾，桌面保持整洁。",
-          "礼盒包装带磁吸开合，可直接作为新年、毕业、生日礼品。",
-          "与成都老字号笔庄合作定制，品质稳定，售后可加购耗材。",
-          "团队提供线上 15 分钟入门视频，扫码即可观看。"
+          "构建基于品牌知识库的多语对话代理，自动同步商品、物流、退换政策并持续学习用户反馈。",
+          "智能分流与优先级判定，售前咨询、物流催单、退货索赔全链路自动化处理，复杂问题转人工。",
+          "集成WhatsApp、Messenger、站内IM与邮件，统一工单视图确保对话上下文不丢失。",
+          "情绪与合规监测实时提醒敏感话术，减少误用词汇导致的差评与平台处罚。",
+          "上线后客服响应从5分钟降至30秒，首次解决率提升至78%，评价分保持4.8+。",
+          "人力成本降低35%，旺季无需额外增编，客服团队可聚焦高价值投诉与运营洞察。"
         ],
         "en": [
-          "Two wolf-hair brushes (soft & medium) cover regular script practice and flowing strokes.",
-          "Copy sheets and stroke breakdown guide help true beginners build rhythm.",
-          "Portable ink and mini inkstone let you practice anywhere.",
-          "30 sheets of thick xuan notepads resist bleed for practice or greetings.",
-          "Foldable felt and pouch keep the desk tidy and travel-ready.",
-          "Magnetic gift box fits New Year, graduation, or birthday gifting.",
-          "Co-developed with a historic Chengdu pen shop; consumables available later.",
-          "Scan to watch a 15-minute starter video prepared by our team."
+          "Built multilingual agents on top of brand KB, syncing catalog, shipping, and return policies with continuous learning loops.",
+          "Smart routing/priorities automated pre-sales, shipping follow-ups, and claims; complex tickets escalated with full context.",
+          "Integrated WhatsApp, Messenger, onsite chat, and email into a unified ticket view to preserve conversation state.",
+          "Tone/compliance monitor flagged risky wording to prevent bad reviews and platform penalties.",
+          "Response time dropped from 5 minutes to 30s; FCR reached 78% and CSAT stayed 4.8+ in new markets.",
+          "CS headcount down 35%; peak seasons handled without temp hiring while the team focused on high-value cases."
         ]
       }
     },
     {
       "id": "3",
       "title": {
-        "zh": "二十四节气 · 便利贴/便利店系列",
-        "en": "24 Solar Terms · Sticky & Mini Store"
+        "zh": "工业设备出海 · 线索到签约闭环",
+        "en": "Industrial GTM · Lead-to-Deal Loop"
       },
-      "cover": "🍃",
+      "cover": "🏗️",
       "category": {
-        "zh": "节气主题",
-        "en": "Seasonal"
+        "zh": "运营协同",
+        "en": "Ops Sync"
       },
-      "ageRange": "办公/学习/礼赠",
-      "duration": "四季伴随",
+      "ageRange": "适用：高客单B2B/渠道",
+      "duration": "12 周交付",
       "summary": {
-        "zh": "以二十四节气色调与植物纹理设计的便利贴、桌面小件与香氛蜡片，把四季带到你的桌面。",
-        "en": "Sticky notes, desk accessories, and scented wax chips styled with 24 solar term palettes and botanical textures."
+        "zh": "为高客单工业设备商搭建渠道拓展与合规风控智能体，覆盖中东与欧盟市场，12周内完成首批签约与经销商入网。",
+        "en": "Channel and compliance agents for an industrial vendor entering MENA/EU, securing first deals and distributors in 12 weeks."
       },
       "content": {
         "zh": [
-          "根据二十四节气调配色卡，每个系列含 3 种渐变色，随心搭配。",
-          "便利贴选用可降解胶，撕取顺滑，重复粘贴不留痕。",
-          "搭配“节气香”蜡片，可挂于办公区或衣柜，营造轻盈气味记忆。",
-          "桌面小件含小票夹、木质托盘与小玻璃瓶，可收纳花材与票据。",
-          "每个节气附一段文字介绍，帮助你在忙碌中感知季节流转。",
-          "系列灵感取自成都周边的山野植物，与本地插画师合作完成。",
-          "包装使用可回收牛皮纸与植物油墨，环保且具质感。",
-          "适合办公桌、学习角，也适合作为节日小礼物。"
+          "市场洞察智能体持续抓取项目招标、基础设施计划与政策动态，生成每周机会雷达。",
+          "渠道拓客智能体从商会、展会、LinkedIn挖掘潜在分销伙伴，并生成本地化合作提案。",
+          "风险控制模块校验KYC、制裁名单、反洗钱与当地认证需求，给出准入评分与补齐清单。",
+          "法务智能体协助起草双语经销协议与SLA，确保当地税务、售后与隐私条款合规。",
+          "运营看板串联市场、销售、法务与交付团队，形成“机会-合规-报价-合同-交付”的透明闭环。",
+          "12周内完成4家核心渠道签约，平均销售周期缩短28%，同时避免了两起高风险合作。"
         ],
         "en": [
-          "Seasonal palettes for each of the 24 solar terms; 3 gradients per mini set.",
-          "Eco adhesive peels cleanly and re-sticks without residue.",
-          "Paired with scented wax chips to hang at desks or closets for gentle notes.",
-          "Desk kit includes receipt clip, wooden tray, and tiny glass bottle for petals or tickets.",
-          "Each term comes with a short note, inviting you to feel the season while working.",
-          "Inspired by plants around Chengdu, co-created with local illustrators.",
-          "Recyclable kraft packaging and plant-based inks for a tactile, green finish.",
-          "Perfect for workspaces, study nooks, or as seasonal gifts."
-        ]
-      }
-    },
-    {
-      "id": "4",
-      "title": {
-        "zh": "城市记忆 · 冰箱贴 & 旅行手帐",
-        "en": "City Memory · Magnets & Travel Journal"
-      },
-      "cover": "🧭",
-      "category": {
-        "zh": "旅行与纪念",
-        "en": "Travel"
-      },
-      "ageRange": "出行/纪念",
-      "duration": "旅途陪伴",
-      "summary": {
-        "zh": "用手绘线条记录城市街景，冰箱贴与旅行手帐组合，让每次旅途都有可见的回忆。",
-        "en": "Hand-drawn city lines on magnets and travel journals help you capture every trip in sight and touch."
-      },
-      "content": {
-        "zh": [
-          "以线稿描绘成都、北京、上海、重庆等城市地标，辅以街巷小物元素。",
-          "冰箱贴采用合金+搪瓷工艺，色彩饱满，磁力稳固，可长期收纳车票与照片。",
-          "旅行手帐内页含行程规划、费用记录、手绘贴纸与口袋页，方便收集票根。",
-          "附赠城市印章小贴纸，可在手帐上为每座城市盖章式打卡。",
-          "支持定制城市：提交旅行照片，我们可按需绘制线稿并制作限量贴纸。",
-          "包装采用抽屉式盒体，便于长期保存，亦可当桌面收纳盒。",
-          "团队每季度更新 3 座城市图案，保持新鲜感与收藏价值。",
-          "适合情侣旅行、好友出游或家庭度假，记录陪伴的温度。"
-        ],
-        "en": [
-          "Line-art of Chengdu, Beijing, Shanghai, Chongqing landmarks with alley details.",
-          "Alloy + enamel magnets with strong hold keep tickets and photos in view.",
-          "Travel journal pages include planner, budget, stickers, and pockets for stubs.",
-          "City stamp stickers let you mark each destination in your journal.",
-          "Custom city option: share a trip photo; we sketch and make a limited sticker run.",
-          "Drawer-style box stores keepsakes and doubles as a desk organizer.",
-          "Three new city designs every quarter to keep collections fresh.",
-          "Great for couples, friends, or families to document warm journeys."
+          "Insight agents tracked tenders, infra programs, and policy shifts to produce a weekly opportunity radar.",
+          "Channel agents sourced distributors via chambers, expos, and LinkedIn, generating localized partner pitches.",
+          "Risk module checked KYC, sanctions, AML, and local certifications, issuing entry scores and remediation lists.",
+          "Legal agent drafted bilingual distributor agreements and SLAs covering tax, support, and privacy compliance.",
+          "Ops board aligned market/sales/legal/delivery into a transparent “opportunity-compliance-quote-contract-delivery” loop.",
+          "Within 12 weeks, 4 core distributors signed; sales cycle -28% and two high-risk deals were avoided."
         ]
       }
     }
