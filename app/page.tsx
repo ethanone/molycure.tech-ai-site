@@ -18,13 +18,11 @@ import {
   Target,
   Rocket
 } from 'lucide-react'
-import AnimatedBackground from './components/AnimatedBackground'
-import GridBackground from './components/GridBackground'
+import ParticleBackground from '@/components/ParticleBackground'
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
-  const [useParticles, setUseParticles] = useState(true) // 切换背景类型
 
   useEffect(() => {
     const handleScroll = () => {
@@ -100,14 +98,17 @@ export default function Home() {
 
   return (
     <div className="min-h-screen relative">
-      {/* 动态背景 - 可以切换两种风格 */}
-      {useParticles ? <AnimatedBackground /> : <GridBackground />}
+      {/* 动态粒子背景 */}
+      <ParticleBackground />
+      
+      {/* 内容层 */}
+      <div className="relative z-10 min-h-screen bg-gradient-to-b from-transparent via-transparent to-gray-50/95">
       {/* Navigation */}
       <nav 
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled 
-            ? 'bg-slate-900/95 backdrop-blur-md shadow-md shadow-blue-500/20' 
-            : 'bg-slate-900/50 backdrop-blur-sm'
+            ? 'bg-white/95 backdrop-blur-md shadow-md' 
+            : 'bg-transparent'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -118,26 +119,26 @@ export default function Home() {
                 <span className="text-white font-bold text-xl">科</span>
               </div>
               <div className="hidden sm:block">
-                <div className="text-lg font-bold text-gray-900">科瑞时代</div>
-                <div className="text-xs text-gray-500">CDKRSD Technology</div>
+                <div className={`text-lg font-bold transition-colors ${isScrolled ? 'text-gray-900' : 'text-white'}`}>科瑞时代</div>
+                <div className={`text-xs transition-colors ${isScrolled ? 'text-gray-500' : 'text-gray-200'}`}>CDKRSD Technology</div>
               </div>
             </div>
 
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#home" className="text-white/90 hover:text-blue-400 transition-colors font-medium">
+              <a href="#home" className={`${isScrolled ? 'text-gray-700' : 'text-white'} hover:text-blue-400 transition-colors font-medium`}>
                 首页
               </a>
-              <a href="#services" className="text-white/90 hover:text-blue-400 transition-colors font-medium">
+              <a href="#services" className={`${isScrolled ? 'text-gray-700' : 'text-white'} hover:text-blue-400 transition-colors font-medium`}>
                 服务
               </a>
-              <a href="#about" className="text-white/90 hover:text-blue-400 transition-colors font-medium">
+              <a href="#about" className={`${isScrolled ? 'text-gray-700' : 'text-white'} hover:text-blue-400 transition-colors font-medium`}>
                 关于我们
               </a>
-              <a href="#contact" className="text-white/90 hover:text-blue-400 transition-colors font-medium">
+              <a href="#contact" className={`${isScrolled ? 'text-gray-700' : 'text-white'} hover:text-blue-400 transition-colors font-medium`}>
                 联系我们
               </a>
-              <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105">
+              <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105">
                 开始合作
               </button>
             </div>
@@ -154,21 +155,21 @@ export default function Home() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-slate-900/95 backdrop-blur-md border-t border-blue-500/20 animate-slide-up">
+          <div className="md:hidden bg-white border-t border-gray-200 animate-slide-up">
             <div className="px-4 py-4 space-y-3">
-              <a href="#home" className="block py-2 text-white/90 hover:text-blue-400 transition-colors">
+              <a href="#home" className="block py-2 text-gray-700 hover:text-blue-600 transition-colors">
                 首页
               </a>
-              <a href="#services" className="block py-2 text-white/90 hover:text-blue-400 transition-colors">
+              <a href="#services" className="block py-2 text-gray-700 hover:text-blue-600 transition-colors">
                 服务
               </a>
-              <a href="#about" className="block py-2 text-white/90 hover:text-blue-400 transition-colors">
+              <a href="#about" className="block py-2 text-gray-700 hover:text-blue-600 transition-colors">
                 关于我们
               </a>
-              <a href="#contact" className="block py-2 text-white/90 hover:text-blue-400 transition-colors">
+              <a href="#contact" className="block py-2 text-gray-700 hover:text-blue-600 transition-colors">
                 联系我们
               </a>
-              <button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg hover:shadow-blue-500/50 transition-all">
+              <button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all">
                 开始合作
               </button>
             </div>
@@ -177,13 +178,13 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative">
+      <section id="home" className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="animate-fade-in">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-2xl">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
               智能科技，创新未来
             </h1>
-            <p className="text-xl md:text-2xl text-blue-100 mb-12 max-w-3xl mx-auto drop-shadow-lg">
+            <p className="text-xl md:text-2xl text-gray-200 mb-12 max-w-3xl mx-auto drop-shadow-md">
               专业的技术团队，前沿的AI解决方案，助力企业数字化转型
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -202,13 +203,13 @@ export default function Home() {
             {stats.map((stat, index) => (
               <div 
                 key={index}
-                className="bg-slate-800/50 backdrop-blur-md border border-blue-500/20 rounded-2xl p-6 shadow-lg shadow-blue-500/10 hover:shadow-xl hover:shadow-blue-500/20 transition-all duration-300 hover:-translate-y-1"
+                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
-                <stat.icon className="w-8 h-8 mx-auto mb-3 text-blue-400" />
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">
+                <stat.icon className="w-8 h-8 mx-auto mb-3 text-blue-500" />
+                <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
                   {stat.number}
                 </div>
-                <div className="text-blue-100 text-sm md:text-base">
+                <div className="text-gray-600 text-sm md:text-base">
                   {stat.label}
                 </div>
               </div>
@@ -218,13 +219,13 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 relative">
+      <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               我们的服务
             </h2>
-            <p className="text-xl text-blue-100 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               为您提供全方位的智能科技解决方案
             </p>
           </div>
@@ -233,19 +234,19 @@ export default function Home() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="group bg-slate-800/50 backdrop-blur-md border border-blue-500/20 rounded-2xl p-8 shadow-lg shadow-blue-500/10 hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-300 hover:-translate-y-2 cursor-pointer"
+                className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer border border-gray-100"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className={`${service.color} w-14 h-14 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                <div className={`${service.color} w-14 h-14 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300`}>
                   <service.icon className="text-white" size={28} />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-blue-100/80 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed">
                   {service.description}
                 </p>
-                <div className="mt-4 flex items-center text-blue-400 font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="mt-4 flex items-center text-blue-600 font-medium opacity-0 group-hover:opacity-100 transition-opacity">
                   了解详情
                   <ChevronRight size={18} className="ml-1 group-hover:translate-x-1 transition-transform" />
                 </div>
@@ -256,42 +257,42 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 relative">
+      <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-purple-50">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 关于科瑞时代
               </h2>
-              <p className="text-lg text-blue-100 mb-6 leading-relaxed">
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                 成都科瑞时代科技有限公司成立于2020年，是一家专注于人工智能、大数据、云计算等前沿科技领域的创新型企业。
               </p>
-              <p className="text-lg text-blue-100 mb-6 leading-relaxed">
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                 我们拥有一支由资深技术专家组成的研发团队，致力于为企业提供最前沿的技术解决方案，帮助客户实现数字化转型，提升核心竞争力。
               </p>
-              <p className="text-lg text-blue-100 mb-8 leading-relaxed">
+              <p className="text-lg text-gray-700 mb-8 leading-relaxed">
                 公司秉承"科技创新，服务至上"的理念，已为500多家企业提供了专业的技术服务，涵盖金融、医疗、教育、制造等多个行业。
               </p>
-              <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-xl font-semibold hover:shadow-xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105">
+              <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-xl font-semibold hover:shadow-xl transition-all duration-300 hover:scale-105">
                 加入我们
               </button>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-slate-800/50 backdrop-blur-md border border-blue-500/20 rounded-2xl p-6 shadow-lg shadow-blue-500/10">
-                <div className="text-blue-400 font-bold text-3xl mb-2">4年+</div>
-                <div className="text-blue-100">行业经验</div>
+              <div className="bg-white rounded-2xl p-6 shadow-lg">
+                <div className="text-blue-600 font-bold text-3xl mb-2">4年+</div>
+                <div className="text-gray-600">行业经验</div>
               </div>
-              <div className="bg-slate-800/50 backdrop-blur-md border border-purple-500/20 rounded-2xl p-6 shadow-lg shadow-purple-500/10">
-                <div className="text-purple-400 font-bold text-3xl mb-2">20+</div>
-                <div className="text-blue-100">技术专利</div>
+              <div className="bg-white rounded-2xl p-6 shadow-lg">
+                <div className="text-purple-600 font-bold text-3xl mb-2">20+</div>
+                <div className="text-gray-600">技术专利</div>
               </div>
-              <div className="bg-slate-800/50 backdrop-blur-md border border-green-500/20 rounded-2xl p-6 shadow-lg shadow-green-500/10">
-                <div className="text-green-400 font-bold text-3xl mb-2">100+</div>
-                <div className="text-blue-100">合作伙伴</div>
+              <div className="bg-white rounded-2xl p-6 shadow-lg">
+                <div className="text-green-600 font-bold text-3xl mb-2">100+</div>
+                <div className="text-gray-600">合作伙伴</div>
               </div>
-              <div className="bg-slate-800/50 backdrop-blur-md border border-orange-500/20 rounded-2xl p-6 shadow-lg shadow-orange-500/10">
-                <div className="text-orange-400 font-bold text-3xl mb-2">24/7</div>
-                <div className="text-blue-100">技术支持</div>
+              <div className="bg-white rounded-2xl p-6 shadow-lg">
+                <div className="text-orange-600 font-bold text-3xl mb-2">24/7</div>
+                <div className="text-gray-600">技术支持</div>
               </div>
             </div>
           </div>
@@ -299,19 +300,19 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 relative">
+      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             开启合作之旅
           </h2>
-          <p className="text-xl text-blue-100 mb-12">
+          <p className="text-xl text-gray-600 mb-12">
             让我们一起探讨如何通过科技创新推动您的业务发展
           </p>
-          <div className="bg-gradient-to-br from-blue-500/20 to-purple-600/20 backdrop-blur-md border border-blue-500/30 rounded-3xl p-12 text-white shadow-2xl shadow-blue-500/20">
+          <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl p-12 text-white shadow-2xl">
             <div className="grid md:grid-cols-2 gap-8 text-left">
               <div>
                 <h3 className="text-2xl font-bold mb-4">联系方式</h3>
-                <div className="space-y-3 text-blue-100">
+                <div className="space-y-3">
                   <p>📧 邮箱: contact@cdkrsd.com</p>
                   <p>📞 电话: 028-8888-8888</p>
                   <p>📍 地址: 成都市高新区天府软件园</p>
@@ -319,7 +320,7 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="text-2xl font-bold mb-4">工作时间</h3>
-                <div className="space-y-3 text-blue-100">
+                <div className="space-y-3">
                   <p>周一至周五: 9:00 - 18:00</p>
                   <p>周六至周日: 预约服务</p>
                   <p>24小时在线技术支持</p>
@@ -331,53 +332,54 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-900/80 backdrop-blur-md border-t border-blue-500/20 text-gray-300 py-12 px-4 sm:px-6 lg:px-8 relative">
+      <footer className="bg-gray-900 text-gray-300 py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center shadow-lg shadow-blue-500/30">
+                <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold text-xl">科</span>
                 </div>
                 <div>
                   <div className="text-white font-bold">科瑞时代</div>
-                  <div className="text-xs text-blue-300">CDKRSD Tech</div>
+                  <div className="text-xs text-gray-400">CDKRSD Tech</div>
                 </div>
               </div>
-              <p className="text-sm text-blue-200">
+              <p className="text-sm text-gray-400">
                 智能科技，创新未来
               </p>
             </div>
             <div>
               <h4 className="text-white font-semibold mb-4">服务</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="text-blue-200 hover:text-white transition-colors">人工智能</a></li>
-                <li><a href="#" className="text-blue-200 hover:text-white transition-colors">云计算</a></li>
-                <li><a href="#" className="text-blue-200 hover:text-white transition-colors">大数据</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">人工智能</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">云计算</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">大数据</a></li>
               </ul>
             </div>
             <div>
               <h4 className="text-white font-semibold mb-4">公司</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="text-blue-200 hover:text-white transition-colors">关于我们</a></li>
-                <li><a href="#" className="text-blue-200 hover:text-white transition-colors">新闻动态</a></li>
-                <li><a href="#" className="text-blue-200 hover:text-white transition-colors">招贤纳士</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">关于我们</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">新闻动态</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">招贤纳士</a></li>
               </ul>
             </div>
             <div>
               <h4 className="text-white font-semibold mb-4">法律</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="text-blue-200 hover:text-white transition-colors">隐私政策</a></li>
-                <li><a href="#" className="text-blue-200 hover:text-white transition-colors">服务条款</a></li>
-                <li><a href="#" className="text-blue-200 hover:text-white transition-colors">Cookie政策</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">隐私政策</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">服务条款</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Cookie政策</a></li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-blue-500/20 pt-8 text-center text-sm">
-            <p className="text-blue-200">© 2026 成都科瑞时代科技有限公司. 保留所有权利.</p>
+          <div className="border-t border-gray-800 pt-8 text-center text-sm">
+            <p>© 2026 成都科瑞时代科技有限公司. 保留所有权利.</p>
           </div>
         </div>
       </footer>
+      </div>
     </div>
   )
 }
