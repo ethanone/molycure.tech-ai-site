@@ -17,7 +17,7 @@ import {
   Rocket,
   Mail,
   Phone,
-  MapPin
+  Briefcase
 } from 'lucide-react'
 import CometBackground from '@/components/CometBackground'
 
@@ -40,14 +40,24 @@ export default function Home() {
       title: 'AI服务器',
       description: '支持国产CPU及Intel、AMD多架构，DDR5/DDR4全规格存储适配，满足信创与高性能计算需求',
       color: 'bg-blue-500',
-      category: '硬件产品'
+      category: '硬件产品',
+      specs: {
+        scenes: ['图形渲染', '搜索推荐'],
+        gpuTypes: ['A10', 'L20'],
+        families: ['vgn7i-vms', 'sgn7i-vms', 'sgn8ia', 'gn8ia']
+      }
     },
     {
       icon: Cpu,
       title: 'GPU服务器',
       description: '专为AI训练与推理优化，支持算力密集型应用，提供强劲的深度学习计算能力',
       color: 'bg-purple-500',
-      category: '硬件产品'
+      category: '硬件产品',
+      specs: {
+        scenes: ['图像识别', '模型推理 7-30B', '模型推理 30-70B', '模型推理 70B-100B+'],
+        gpuTypes: ['T4', 'A10', 'V100', 'L20'],
+        families: ['gn6i', 'gn7i', 'gn6e', 'gn6v', 'ebmgn7ix', 'ebmgn6v', 'ebmgn8is']
+      }
     },
     {
       icon: Network,
@@ -128,9 +138,9 @@ export default function Home() {
               <a href="#contact" className="text-gray-200 hover:text-blue-400 transition-colors font-medium">
                 联系我们
               </a>
-              <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300 hover:scale-105">
+              <a href="mailto:dennis.y@coray.tech" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300 hover:scale-105">
                 商务合作
-              </button>
+              </a>
             </div>
 
             {/* Mobile Menu Button */}
@@ -159,9 +169,9 @@ export default function Home() {
               <a href="#contact" className="block py-2 text-gray-200 hover:text-blue-400 transition-colors">
                 联系我们
               </a>
-              <button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all">
+              <a href="mailto:dennis.y@coray.tech" className="block w-full text-center bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all">
                 商务合作
-              </button>
+              </a>
             </div>
           </div>
         )}
@@ -246,9 +256,51 @@ export default function Home() {
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
                   {product.title}
                 </h3>
-                <p className="text-gray-400 leading-relaxed">
+                <p className="text-gray-400 leading-relaxed mb-4">
                   {product.description}
                 </p>
+                
+                {/* GPU规格信息 - 仅AI服务器和GPU服务器显示 */}
+                {product.specs && (
+                  <div className="mt-4 pt-4 border-t border-gray-700/50 space-y-3">
+                    <div>
+                      <div className="text-xs text-gray-500 mb-2">适用场景</div>
+                      <div className="flex flex-wrap gap-1.5">
+                        {product.specs.scenes.map((scene, i) => (
+                          <span key={i} className="text-xs px-2 py-1 bg-gray-700/60 text-gray-300 rounded">
+                            {scene}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <div className="text-xs text-gray-500 mb-2">GPU卡型</div>
+                      <div className="flex flex-wrap gap-1.5">
+                        {product.specs.gpuTypes.map((gpu, i) => (
+                          <span key={i} className="text-xs px-2 py-1 bg-blue-900/40 text-blue-300 rounded font-mono">
+                            {gpu}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <div className="text-xs text-gray-500 mb-2">规格族</div>
+                      <div className="flex flex-wrap gap-1.5">
+                        {product.specs.families.slice(0, 4).map((family, i) => (
+                          <span key={i} className="text-xs px-2 py-1 bg-gray-700/40 text-gray-400 rounded font-mono">
+                            {family}
+                          </span>
+                        ))}
+                        {product.specs.families.length > 4 && (
+                          <span className="text-xs px-2 py-1 text-gray-500">
+                            +{product.specs.families.length - 4}
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                )}
+                
                 <div className="mt-4 flex items-center text-blue-400 font-medium opacity-0 group-hover:opacity-100 transition-opacity">
                   了解详情
                   <ChevronRight size={18} className="ml-1 group-hover:translate-x-1 transition-transform" />
@@ -285,33 +337,33 @@ export default function Home() {
                 关于科瑞时代
               </h2>
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                成都科瑞时代科技有限公司（2017年成立），是专注于<span className="text-blue-400 font-semibold">AI+硬件集成</span>的创新科技企业。以计算机硬件与网络设备为核心根基，深度赋能教育、医疗、电力、通信等行业数字化转型。
+                成都科瑞时代科技有限公司（2017年成立），是专注于AI+硬件集成的创新科技企业。以计算机硬件与网络设备为核心根基，深度赋能教育、医疗、电力、通信等行业数字化转型。
               </p>
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                <span className="text-purple-400 font-semibold">专业团队支撑：</span>核心成员具备多年硬件架构设计与行业AI方案落地经验，精通多架构硬件优化、智能系统协同调试，深度理解本地行业需求，提供全流程闭环服务。
+                <span className="text-white font-medium">专业团队支撑：</span>核心成员具备多年硬件架构设计与行业AI方案落地经验，精通多架构硬件优化、智能系统协同调试，深度理解本地行业需求，提供全流程闭环服务。
               </p>
               <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                <span className="text-cyan-400 font-semibold">立足本地，服务西南。</span>科瑞时代以可靠品质与高效响应赢得行业认可，未来将持续深耕AI与数字化转型融合创新，成为区域行业智能化升级的可靠伙伴。
+                <span className="text-white font-medium">立足本地，服务西南。</span>科瑞时代以可靠品质与高效响应赢得行业认可，未来将持续深耕AI与数字化转型融合创新，成为区域行业智能化升级的可靠伙伴。
               </p>
               <a href="mailto:dennis.y@coray.tech" className="inline-block bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-xl font-semibold hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-300 hover:scale-105">
                 商务合作
               </a>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all">
-                <div className="text-blue-400 font-bold text-3xl mb-2">8年+</div>
+              <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-gray-600 transition-all">
+                <div className="text-white font-bold text-3xl mb-2">8年+</div>
                 <div className="text-gray-400">行业深耕</div>
               </div>
-              <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-purple-500/50 transition-all">
-                <div className="text-purple-400 font-bold text-3xl mb-2">多架构</div>
+              <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-gray-600 transition-all">
+                <div className="text-white font-bold text-3xl mb-2">多架构</div>
                 <div className="text-gray-400">硬件支持</div>
               </div>
-              <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-green-500/50 transition-all">
-                <div className="text-green-400 font-bold text-3xl mb-2">4+行业</div>
+              <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-gray-600 transition-all">
+                <div className="text-white font-bold text-3xl mb-2">4+行业</div>
                 <div className="text-gray-400">深度覆盖</div>
               </div>
-              <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-orange-500/50 transition-all">
-                <div className="text-orange-400 font-bold text-3xl mb-2">西南</div>
+              <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-gray-600 transition-all">
+                <div className="text-white font-bold text-3xl mb-2">西南</div>
                 <div className="text-gray-400">区域服务</div>
               </div>
             </div>
@@ -332,11 +384,11 @@ export default function Home() {
             <div className="grid md:grid-cols-3 gap-8 text-left">
               <div className="text-center md:text-left">
                 <div className="flex items-center justify-center md:justify-start gap-2 mb-3">
-                  <Mail className="w-5 h-5" />
-                  <h3 className="text-lg font-bold">售后服务</h3>
+                  <Briefcase className="w-5 h-5" />
+                  <h3 className="text-lg font-bold">商务合作</h3>
                 </div>
-                <a href="mailto:service@coray.tech" className="text-blue-200 hover:text-white transition-colors">
-                  service@coray.tech
+                <a href="mailto:dennis.y@coray.tech" className="text-blue-200 hover:text-white transition-colors">
+                  dennis.y@coray.tech
                 </a>
               </div>
               <div className="text-center md:text-left">
@@ -350,11 +402,11 @@ export default function Home() {
               </div>
               <div className="text-center md:text-left">
                 <div className="flex items-center justify-center md:justify-start gap-2 mb-3">
-                  <MapPin className="w-5 h-5" />
-                  <h3 className="text-lg font-bold">商务合作</h3>
+                  <Mail className="w-5 h-5" />
+                  <h3 className="text-lg font-bold">售后服务</h3>
                 </div>
-                <a href="mailto:dennis.y@coray.tech" className="text-blue-200 hover:text-white transition-colors">
-                  dennis.y@coray.tech
+                <a href="mailto:service@coray.tech" className="text-blue-200 hover:text-white transition-colors">
+                  service@coray.tech
                 </a>
               </div>
             </div>
@@ -404,15 +456,14 @@ export default function Home() {
             <div>
               <h4 className="text-white font-semibold mb-4">联系我们</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="mailto:service@coray.tech" className="hover:text-blue-400 transition-colors">售后服务</a></li>
-                <li><a href="mailto:info@coray.tech" className="hover:text-blue-400 transition-colors">项目咨询</a></li>
                 <li><a href="mailto:dennis.y@coray.tech" className="hover:text-blue-400 transition-colors">商务合作</a></li>
+                <li><a href="mailto:info@coray.tech" className="hover:text-blue-400 transition-colors">项目咨询</a></li>
+                <li><a href="mailto:service@coray.tech" className="hover:text-blue-400 transition-colors">售后服务</a></li>
               </ul>
             </div>
           </div>
           <div className="border-t border-gray-800 pt-8 text-center text-sm">
             <p className="text-gray-500">© 2017-2026 Chengdu Coray Times Tech Co.,Ltd. All rights reserved.</p>
-            <p className="text-gray-600 mt-2">成都科瑞时代科技有限公司</p>
           </div>
         </div>
       </footer>
