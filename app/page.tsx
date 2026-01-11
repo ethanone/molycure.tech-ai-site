@@ -352,7 +352,7 @@ export default function Home() {
                 <span className="text-white font-medium">专业团队支撑：</span>核心成员具备多年硬件架构设计与行业AI方案落地经验，精通多架构硬件优化、智能系统协同调试，深度理解本地行业需求，提供全流程闭环服务。
               </p>
               <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                <span className="text-white font-medium">立足本地，服务西南。</span>科瑞时代以可靠品质与高效响应赢得行业认可，未来将持续深耕AI与数字化转型融合创新，成为区域行业智能化升级的可靠伙伴，并面向全球提供供应链服务。
+                <span className="text-white font-medium">立足本地，服务全球。</span>科瑞时代以可靠品质与高效响应赢得行业认可，未来将持续深耕AI与数字化转型融合创新，成为区域行业智能化升级的可靠伙伴，并面向全球提供供应链服务。
               </p>
               <a href="mailto:dennis.y@coray.tech" className="inline-block bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-xl font-semibold hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-300 hover:scale-105">
                 商务合作
@@ -420,7 +420,7 @@ export default function Home() {
               </div>
             </div>
             <div className="mt-8 pt-8 border-t border-white/20 text-center">
-              <p className="text-blue-100">📍 成都市高新区 · 立足本地，服务西南</p>
+              <p className="text-blue-100">📍 成都市高新区 · 立足本地，服务全球</p>
             </div>
           </div>
         </div>
