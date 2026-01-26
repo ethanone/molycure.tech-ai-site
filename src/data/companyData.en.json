@@ -1,0 +1,281 @@
+{
+  "companyInfo": {
+    "name": "Zhixiang Data",
+    "nameEn": "Zhixiang Data",
+    "brandName": "Zhixiang Data",
+    "slogan": "Activating Data Value for the Entire IP Chain",
+    "sloganEn": "Activating Data Value for the Entire IP Chain",
+    "tagline": "Data-Driven · Intelligent Decisions",
+    "focus": "Intellectual Property Data Services",
+    "founded": "2020",
+    "website": "www.zhixiang-data.com",
+    "phone": "+86 138 0000 0000",
+    "email": "contact@zhixiang-data.com",
+    "emailSecondary": "info@zhixiang-data.com",
+    "address": "No. 1 Zhongguancun Street, Haidian District, Beijing, China",
+    "capacity": "Comprehensive IP data services",
+    "responseTime": "Response within 2 business days"
+  },
+  "aboutUs": {
+    "intro": [
+      "Zhixiang Data specializes in providing professional data services and intelligent solutions for the entire intellectual property industry chain. With years of experience in the IP field, we deeply understand the data needs and business pain points of different entities such as government agencies, protection centers, industrial parks, and agency firms.",
+      "We firmly believe that data is the core driving force for the transformation and upgrading of the intellectual property industry. By establishing a technically advanced data management system, we transform massive unstructured data into actionable and decision-worthy value information, helping clients achieve digital and intelligent transformation.",
+      "Zhixiang Data adheres to the service philosophy of 'long-termism' and 'refund if ineffective', with the common goal of achieving real results, providing clients with low-threshold and high-effectiveness data solutions."
+    ],
+    "mission": "Explore key scenario digital intelligence solutions based on artificial intelligence technology with low cost and strong effectiveness. Zhixiang provides a unified platform that achieves end-to-end data management while enabling data construction, real-time analysis, and value output for key client scenarios.",
+    "vision": "To become the most trusted data service provider in the intellectual property field, driving industry innovation with data and empowering industrial upgrading with intelligence.",
+    "values": [
+      "Equal emphasis on data authority and standardization",
+      "Equal emphasis on completeness and timeliness",
+      "Equal emphasis on accuracy and usability",
+      "Equal emphasis on long-termism and effectiveness orientation"
+    ]
+  },
+  "coreAdvantages": [
+    {
+      "icon": "Shield",
+      "title": "Authoritative Data Sources",
+      "description": "Relying on government authoritative open databases and industry trusted processed datasets, ensuring the authority and reliability of data sources, providing a solid data foundation for customer decisions.",
+      "highlights": ["Government Open Database", "Industry Trusted Dataset", "Multi-source Integration"]
+    },
+    {
+      "icon": "CheckCircle2",
+      "title": "Rigorous Data Governance",
+      "description": "Following national information security standards, data security standards, and trusted data space standard systems, establishing comprehensive data governance processes to ensure data security and compliance.",
+      "highlights": ["Info Security Standards", "Data Security Standards", "Trusted Data Space"]
+    },
+    {
+      "icon": "Cpu",
+      "title": "Intelligent Data Applications",
+      "description": "Providing various forms of data application products such as datasets, data reports, and data platforms to meet diverse customer needs and maximize data value.",
+      "highlights": ["Standard Datasets", "Custom Reports", "Intelligent Platform"]
+    },
+    {
+      "icon": "TrendingUp",
+      "title": "Efficient Data Collaboration",
+      "description": "Achieving multi-source unified data, top-down connectivity, and classified support, ensuring safe and smooth data sharing and exchange, improving inter-organizational collaboration efficiency.",
+      "highlights": ["Multi-source Unity", "Top-down", "Secure Sharing"]
+    }
+  ],
+  "focusAreas": [
+    {
+      "name": "Government Agencies",
+      "icon": "Shield",
+      "description": "Digital intelligence judgment, smart supervision, government-enterprise collaboration",
+      "color": "#8B2F39"
+    },
+    {
+      "name": "Protection Centers",
+      "icon": "CheckCircle2",
+      "description": "Overseas protection, tiered warning, anomaly detection",
+      "color": "#6B4C7A"
+    },
+    {
+      "name": "Industrial Parks",
+      "icon": "Home",
+      "description": "Industry navigation, excellent enterprise identification, investment invitation",
+      "color": "#D4AF37"
+    },
+    {
+      "name": "Agency Firms",
+      "icon": "FileText",
+      "description": "Regional analysis, case source recommendation, intelligent drafting",
+      "color": "#C9A872"
+    }
+  ],
+  "team": {
+    "intro": "The Zhixiang Data team consists of senior intellectual property experts, data scientists, and artificial intelligence engineers. We have both deep industry experience and cutting-edge technology expertise, providing professional, efficient, and reliable data services to clients.",
+    "leadership": [
+      {
+        "name": "Data Governance Team",
+        "nameEn": "Data Governance Team",
+        "title": "Data Quality Assurance · Security Compliance",
+        "titleEn": "Data Quality Assurance",
+        "avatar": "/images/team/data-governance.jpg",
+        "education": "Data Management Experts",
+        "background": "Years of experience in data governance, familiar with national information security and data security standards",
+        "achievements": [
+          "Established comprehensive data governance system",
+          "Ensured data authority, standardization, and completeness",
+          "Guaranteed data security and compliance"
+        ],
+        "expertise": ["Data Governance", "Information Security", "Compliance Management", "Quality Control"]
+      },
+      {
+        "name": "AI Algorithm Team",
+        "nameEn": "AI Algorithm Team",
+        "title": "Intelligent Technology Innovation · Scenario Implementation",
+        "titleEn": "Intelligent Innovation",
+        "avatar": "/images/team/ai-team.jpg",
+        "education": "Artificial Intelligence Experts",
+        "background": "Rich experience in machine learning and natural language processing, focusing on IP scenario applications",
+        "achievements": [
+          "Developed multiple IP AI applications",
+          "Implemented intelligent judgment, intelligent drafting and other functions",
+          "Improved customer work efficiency by over 50%"
+        ],
+        "expertise": ["Machine Learning", "NLP", "Knowledge Graph", "Intelligent Applications"]
+      },
+      {
+        "name": "Industry Expert Team",
+        "nameEn": "Industry Expert Team",
+        "title": "Deep Industry Experience · Insight into Needs",
+        "titleEn": "Industry Expertise",
+        "avatar": "/images/team/industry-expert.jpg",
+        "education": "Intellectual Property Experts",
+        "background": "Long-term service to government agencies, protection centers, industrial parks, agency firms and other entities",
+        "achievements": [
+          "Deep understanding of business pain points of various entities",
+          "Designed targeted solutions",
+          "Successfully served hundreds of clients"
+        ],
+        "expertise": ["Patent Analysis", "Trademark Management", "Copyright Protection", "Business Consulting"]
+      },
+      {
+        "name": "Customer Service Team",
+        "nameEn": "Customer Service Team",
+        "title": "Professional Service · Long-term Companionship",
+        "titleEn": "Professional Service",
+        "avatar": "/images/team/service-team.jpg",
+        "education": "Service Management Experts",
+        "background": "Adhering to the service philosophy of long-termism and refund if ineffective, committed to creating real value for clients",
+        "achievements": [
+          "Customer satisfaction over 95%",
+          "Renewal rate maintained at over 90%",
+          "Zero complaint record"
+        ],
+        "expertise": ["Customer Service", "Project Management", "Training Support", "Value Delivery"]
+      }
+    ],
+    "teamSize": {
+      "development": "30+",
+      "research": "15+",
+      "aiAlgorithm": "10+",
+      "advisors": {
+        "medical": "IP Legal Advisory Team",
+        "power": "Data Security & Compliance Experts",
+        "design": "Senior Industry Advisors"
+      }
+    }
+  },
+  "caseStudies": [
+    {
+      "id": "case-01",
+      "title": "Government Digital Intelligence Supervision Platform",
+      "subtitle": "Helping government achieve smart supervision and government-enterprise collaboration",
+      "category": "Government Agencies",
+      "icon": "Shield",
+      "color": "#8B2F39",
+      "technologies": ["Digital Intelligence Judgment", "Smart Supervision", "Government-Enterprise Collaboration"],
+      "painPoint": "Traditional supervision model relies on manual work, low efficiency, difficult to detect anomalies in time, information asymmetry between government and enterprises, difficult collaboration.",
+      "features": [
+        {
+          "name": "Intelligent Judgment System",
+          "description": "Based on big data and AI technology, automatically analyze massive IP data, identify abnormal patterns, and assist supervision decisions"
+        },
+        {
+          "name": "Visual Supervision Dashboard",
+          "description": "Real-time display of panoramic IP data in the jurisdiction, supporting multi-dimensional analysis and drill-down, improving supervision efficiency"
+        },
+        {
+          "name": "Government-Enterprise Collaboration Platform",
+          "description": "Breaking down information barriers between government and enterprises, achieving precise policy push and rapid response to enterprise demands"
+        }
+      ],
+      "outcome": "Supervision efficiency improved by 60%, anomaly detection time shortened by 80%, government-enterprise collaboration satisfaction reached over 95%.",
+      "image": "/images/case-government.webp"
+    },
+    {
+      "id": "case-02",
+      "title": "Protection Center Overseas Warning System",
+      "subtitle": "Safeguarding enterprise overseas IP protection",
+      "category": "Protection Centers",
+      "icon": "CheckCircle2",
+      "color": "#6B4C7A",
+      "technologies": ["Overseas Protection", "Tiered Warning", "Anomaly Detection"],
+      "painPoint": "Enterprises lack awareness of overseas IP protection, lack effective risk warning mechanisms, and face high costs for rights protection.",
+      "features": [
+        {
+          "name": "Global Patent Monitoring",
+          "description": "Real-time monitoring of patent application dynamics in major countries and regions worldwide, timely detection of potential infringement risks"
+        },
+        {
+          "name": "Intelligent Tiered Warning",
+          "description": "Automatic assessment of risk levels based on AI algorithms, tiered push of warning information, helping enterprises focus on key risks"
+        },
+        {
+          "name": "Anomaly Behavior Recognition",
+          "description": "Identifying abnormal application patterns and malicious preemptive registration behavior, providing data support for enterprise rights protection"
+        }
+      ],
+      "outcome": "Successfully provided overseas protection services to 200+ enterprises, helping clients discover and handle 300+ potential risks in time.",
+      "image": "/images/case-protection.webp"
+    },
+    {
+      "id": "case-03",
+      "title": "Industrial Park Investment Data Platform",
+      "subtitle": "Precise investment, helping parks achieve high-quality development",
+      "category": "Industrial Parks",
+      "icon": "Home",
+      "color": "#D4AF37",
+      "technologies": ["Industry Navigation", "Excellent Enterprise Identification", "Investment Invitation"],
+      "features": [
+        {
+          "name": "Industry Navigation Map",
+          "description": "Constructing industry chain maps, clearly displaying industry structure and enterprise distribution, providing basis for investment decisions"
+        },
+        {
+          "name": "Excellent Enterprise Identification",
+          "description": "Based on multi-dimensional data analysis, intelligently identifying excellent enterprises and potential enterprises that match the park positioning"
+        },
+        {
+          "name": "Precise Investment Invitation",
+          "description": "Generating enterprise profiles and investment scripts, supporting multi-channel precise reach to target enterprises via email, SMS, etc."
+        }
+      ],
+      "outcome": "Investment success rate increased by 40%, number of excellent enterprises attracted tripled, park output value increased significantly.",
+      "image": "/images/case-park.webp"
+    },
+    {
+      "id": "case-04",
+      "title": "Agency Intelligent Service System",
+      "subtitle": "AI empowerment, enhancing agency service capabilities",
+      "category": "Agency Firms",
+      "icon": "FileText",
+      "color": "#C9A872",
+      "technologies": ["Regional Analysis", "Case Source Recommendation", "Intelligent Drafting"],
+      "features": [
+        {
+          "name": "Regional Market Analysis",
+          "description": "In-depth analysis of IP market conditions in target regions, providing data support for business expansion"
+        },
+        {
+          "name": "Intelligent Case Source Recommendation",
+          "description": "Based on customer profiles and historical data, intelligently recommending potential clients and business opportunities"
+        },
+        {
+          "name": "AI-Assisted Drafting",
+          "description": "Using NLP technology to assist in drafting patent application documents, improving drafting efficiency and quality"
+        }
+      ],
+      "outcome": "Agency business volume increased by 50%, drafting efficiency improved by 70%, customer satisfaction significantly improved.",
+      "image": "/images/case-agency.webp"
+    }
+  ],
+  "contact": {
+    "phone": "+86 138 0000 0000",
+    "email": "contact@zhixiang-data.com",
+    "emailSecondary": "info@zhixiang-data.com",
+    "address": "No. 1 Zhongguancun Street, Haidian District, Beijing, China",
+    "addressShort": "Beijing Zhongguancun",
+    "wechat": "Please contact via email for WeChat",
+    "workingHours": "Weekdays 9:00-18:00 (GMT+8)",
+    "responseTime": "Response within 2 business days",
+    "services": [
+      "Get data samples and solution demos",
+      "Free customized industry solutions",
+      "Schedule product demo and trial",
+      "Learn about latest products, features and resources"
+    ]
+  }
+}

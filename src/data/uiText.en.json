@@ -1,0 +1,93 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About Us",
+    "team": "Team",
+    "services": "Services",
+    "cases": "Cases",
+    "contact": "Contact",
+    "requestSample": "Contact Now",
+    "switchLanguage": "Switch Language",
+    "switchToEnglish": "Switch to Chinese"
+  },
+  "hero": {
+    "learnMore": "Learn More",
+    "contactUs": "Contact Now"
+  },
+  "solutions": {
+    "badge": "Key Scenario Solutions",
+    "title": "Explore key scenario digital intelligence solutions based on AI technology",
+    "titleHighlight": "Low cost, strong effectiveness",
+    "subtitle": "Zhixiang provides a unified platform that achieves end-to-end data management while enabling data construction, real-time analysis, and value output for key client scenarios."
+  },
+  "focusAreas": {
+    "badge": "Core Service Areas",
+    "title": "Our",
+    "titleHighlight": "Focus Areas",
+    "subtitle": "Committed to providing precise intelligent solutions for the following key areas, addressing actual needs and challenges in their work"
+  },
+  "dataSystem": {
+    "badge": "Data Management System",
+    "title": "Building a technically advanced data management system",
+    "titleHighlight": "with both data scale and reliability",
+    "subtitle": "Meeting customer basic requirements for data authority, standardization, completeness, timeliness, accuracy and usability."
+  },
+  "about": {
+    "badge": "About Zhixiang",
+    "title": "Focus on",
+    "titleHighlight": "Intellectual Property Data Services",
+    "coreGoal": "Core Mission",
+    "vision": "Vision"
+  },
+  "advantages": {
+    "badge": "Core Competitiveness",
+    "title": "Why Choose",
+    "titleHighlight": "Zhixiang Data"
+  },
+  "team": {
+    "badge": "Core Team",
+    "title": "Meet Our",
+    "titleHighlight": "Expert Team"
+  },
+  "testimonials": {
+    "badge": "Client Testimonials",
+    "title": "Join the major client service group using Zhixiang Data",
+    "titleHighlight": "Flexible cooperation, low threshold",
+    "subtitle": "We proudly showcase our values of long-termism and refund if ineffective to clients, with achieving real results as our common goal."
+  },
+  "cases": {
+    "badge": "Success Cases",
+    "title": "Real Scenarios",
+    "titleHighlight": "of Intelligent Implementation",
+    "subtitle": "Deep integration of AI technology and industry knowledge, creating tangible business value for customers",
+    "technologies": "Core Technologies",
+    "painPoint": "Pain Point: ",
+    "features": "Core Features",
+    "outcome": "Project Results"
+  },
+  "contact": {
+    "badge": "Contact Us",
+    "title": "Get in touch with our major client service experts",
+    "titleHighlight": "Start with good service",
+    "titleSuffix": "",
+    "subtitle": "Get samples, free customized solutions, and be the first to learn about our new products, new features and new resources.",
+    "phoneLabel": "Phone",
+    "emailLabel": "Email",
+    "addressLabel": "Address",
+    "cta": "Contact Now",
+    "values": "Our Core Values",
+    "advisors": "Industry Expert Advisors"
+  },
+  "footer": {
+    "quickLinks": "Quick Links",
+    "contactInfo": "Contact Information",
+    "about": "About Us",
+    "team": "Core Team",
+    "services": "Services",
+    "cases": "Success Cases",
+    "contact": "Contact Us",
+    "allRightsReserved": "All rights reserved.",
+    "foundedIn": "Founded in",
+    "focusOn": "Focus on IP Data Services"
+  }
+}
