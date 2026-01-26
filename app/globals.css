@@ -12,10 +12,48 @@ html {
   scroll-behavior: smooth;
 }
 
+/* 主题变量 - 浅色模式（默认） */
+:root {
+  --bg-primary: #F5F5F5;
+  --bg-secondary: #FFFFFF;
+  --bg-card: rgba(255, 255, 255, 0.8);
+  --bg-card-hover: rgba(255, 255, 255, 0.95);
+  --text-primary: #000000;
+  --text-secondary: #555555;
+  --text-muted: #888888;
+  --border-color: #E0E0E0;
+  --border-hover: rgba(0, 224, 107, 0.5);
+  --accent-primary: #00E06B;
+  --accent-secondary: #00C29E;
+  --accent-tertiary: #00A9B0;
+  --shadow-color: rgba(0, 224, 107, 0.1);
+  --nav-bg: rgba(255, 255, 255, 0.95);
+}
+
+/* 主题变量 - 深色模式 */
+[data-theme='dark'] {
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #12121a;
+  --bg-card: rgba(18, 18, 26, 0.8);
+  --bg-card-hover: rgba(18, 18, 26, 0.95);
+  --text-primary: #FFFFFF;
+  --text-secondary: #B0B0B0;
+  --text-muted: #888888;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --border-hover: rgba(0, 224, 107, 0.6);
+  --accent-primary: #00E06B;
+  --accent-secondary: #00C29E;
+  --accent-tertiary: #00A9B0;
+  --shadow-color: rgba(0, 224, 107, 0.2);
+  --nav-bg: rgba(10, 10, 15, 0.95);
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   overflow-x: hidden;
-  background-color: #F5F5F5;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* 自定义滚动条 */
@@ -24,20 +62,25 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #E0E0E0;
+  background: var(--border-color);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #00E06B, #00C29E);
+  background: linear-gradient(to bottom, var(--accent-primary), var(--accent-secondary));
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #00C29E, #00A9B0);
+  background: linear-gradient(to bottom, var(--accent-secondary), var(--accent-tertiary));
 }
 
 /* 选中文字样式 */
 ::selection {
   background: rgba(0, 224, 107, 0.3);
-  color: #000;
+  color: var(--text-primary);
+}
+
+/* 主题切换动画 */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }

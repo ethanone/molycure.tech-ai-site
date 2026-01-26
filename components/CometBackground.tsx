@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import { useTheme } from '@/contexts/ThemeContext'
 
 interface Comet {
   x: number
@@ -44,6 +45,7 @@ export default function CometBackground() {
   const starsRef = useRef<Star[]>([])
   const particlesRef = useRef<Particle[]>([])
   const mouseRef = useRef({ x: 0, y: 0 })
+  const { theme } = useTheme()
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -146,11 +148,15 @@ export default function CometBackground() {
       // 不绘制背景，使用透明背景让页面背景显示
       ctx.clearRect(0, 0, width, height)
 
+      // 根据主题调整不透明度
+      const baseOpacity = theme === 'dark' ? 1.0 : 0.8
+      const starOpacity = theme === 'dark' ? 0.9 : 0.6
+
       // 绘制星星 - 增强版，更明显
       starsRef.current.forEach((star) => {
         star.twinklePhase += star.twinkleSpeed
         const twinkle = 0.5 + 0.5 * Math.sin(star.twinklePhase)
-        const currentOpacity = star.opacity * twinkle * 0.8 // 增加不透明度
+        const currentOpacity = star.opacity * twinkle * starOpacity
 
         // 星星光晕 - 多层光晕效果
         const glowGradient = ctx.createRadialGradient(
@@ -213,7 +219,7 @@ export default function CometBackground() {
         // 绘制尾迹 - 增强版，更炫酷
         comet.trail.forEach((point, i) => {
           const progress = i / comet.trail.length
-          const trailOpacity = (1 - progress) * point.opacity * 0.9 // 增加不透明度
+          const trailOpacity = (1 - progress) * point.opacity * baseOpacity
           const trailRadius = point.size * (1 - progress * 0.7)
 
           // 尾迹渐变色 - 绿色系，更鲜艳
@@ -366,7 +372,7 @@ export default function CometBackground() {
           const dist = Math.sqrt(dx * dx + dy * dy)
 
           if (dist < 250) {
-            const opacity = (1 - dist / 250) * 0.15
+            const opacity = (1 - dist / 250) * (theme === 'dark' ? 0.2 : 0.1)
             const gradient = ctx.createLinearGradient(comet.x, comet.y, other.x, other.y)
             gradient.addColorStop(0, `rgba(0, 224, 107, ${opacity})`)
             gradient.addColorStop(0.5, `rgba(0, 194, 158, ${opacity * 0.8})`)
@@ -394,7 +400,7 @@ export default function CometBackground() {
         cancelAnimationFrame(animationFrameRef.current)
       }
     }
-  }, [])
+  }, [theme])
 
   return (
     <canvas
