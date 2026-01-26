@@ -15,6 +15,7 @@ html {
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   overflow-x: hidden;
+  background-color: #F5F5F5;
 }
 
 /* 自定义滚动条 */
@@ -23,20 +24,20 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #1a1b3a;
+  background: #E0E0E0;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #3b82f6, #8b5cf6);
+  background: linear-gradient(to bottom, #00E06B, #00C29E);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #60a5fa, #a78bfa);
+  background: linear-gradient(to bottom, #00C29E, #00A9B0);
 }
 
 /* 选中文字样式 */
 ::selection {
-  background: rgba(59, 130, 246, 0.3);
-  color: #fff;
+  background: rgba(0, 224, 107, 0.3);
+  color: #000;
 }

@@ -1,20 +1,22 @@
-# Coray Tech 科瑞时代科技官网
+# 魔力奇 Molycure | AI智能体全球出海解决方案
 
 ## 🚀 公司简介
 
-成都科瑞时代科技有限公司（2017年成立），扎根成都、辐射西南，是专注于AI+硬件集成的创新科技企业。以计算机硬件与网络设备为核心根基，深度赋能教育、医疗、电力、通信等行业数字化转型，提供"硬件选型-软件适配-方案设计-部署实施"全链条智能应用解决方案。
+魔力奇（Molycure）是一家基于人工智能的智能体项目，专注帮助企业高效出海。依托大模型与智能体技术，我们为企业提供一站式出海解决方案，包括市场洞察、智能拓客、多语种沟通、合规风控与运营协同，助力企业低成本进入全球市场，提升获客效率与转化效果。
 
-## ✨ 核心产品与方案
+## ✨ 核心服务
 
-### 全场景硬件矩阵
-- **AI服务器** - 支持国产CPU及Intel、AMD多架构
-- **GPU服务器** - 专为AI训练与推理优化
-- **智能交换机** - 高性能网络设备
+### 一站式出海服务
+从市场洞察到运营协同，用一套智能体系统跑通出海全流程
 
-### 行业AI落地
-- **智慧教育** - 智慧校园、智能教学解决方案
-- **智能医疗** - 智能诊断、数据分析医疗AI应用
-- **电力通信智能化** - 电力运维、通信网络优化
+- **品牌与市场** - 基于公开数据、社交声量与行业报告，快速建立目标区域的机会图谱和品牌定位建议
+- **获客与沟通** - 多语种外联、站内外客服与社媒私信统一由智能体协同处理，保证语气统一、合规可控
+
+### 核心优势
+- **AI智能体技术** - 基于大模型与智能体编排
+- **全球市场覆盖** - 支持100+多语种沟通
+- **高效低成本** - 节省30-40%一线人力成本
+- **数据驱动决策** - 线索转化效率提升2.1x
 
 ## 🛠️ 技术栈
 
@@ -27,11 +29,17 @@
 ## 📦 快速开始
 
 ```bash
+# 克隆仓库
+git clone https://github.com/htzlai/molycure.tech-ai-site.git
+cd molycure-ai-site
+
 # 安装依赖
 npm install
 
 # 启动开发服务器
 npm run dev
+
+# 浏览器访问 http://localhost:3000
 
 # 构建生产版本
 npm run build
@@ -43,15 +51,15 @@ npm start
 ## 📁 项目结构
 
 ```
-cdkrsd-ai-site/
+molycure-ai-site/
 ├── app/
-│   ├── layout.tsx          # 根布局
-│   ├── page.tsx            # 主页面
+│   ├── layout.tsx          # 根布局 + SEO配置
+│   ├── page.tsx            # 主页面（包含所有sections）
 │   └── globals.css         # 全局样式
 ├── components/
-│   └── CometBackground.tsx # 彗星粒子背景组件
+│   └── CometBackground.tsx # 彗星粒子背景动画组件
 ├── public/
-│   └── logo.png            # 公司Logo
+│   └── logo.png            # Molycure Logo
 ├── package.json
 ├── tailwind.config.js
 ├── tsconfig.json
@@ -81,7 +89,7 @@ cdkrsd-ai-site/
    - 测试通过后提交到 Git
 
 2. **代码管理 (GitHub)**
-   - 代码推送到 GitHub 仓库
+   - 代码推送到 GitHub 仓库：https://github.com/htzlai/molycure.tech-ai-site
    - 团队成员通过 GitHub 协作
    - 版本历史和代码审查
 
@@ -96,8 +104,8 @@ cdkrsd-ai-site/
 
 ```bash
 # 1. 克隆仓库
-git clone https://github.com/ethanone/cdkrsd-ai-site.git
-cd cdkrsd-ai-site
+git clone https://github.com/htzlai/molycure.tech-ai-site.git
+cd molycure-ai-site
 
 # 2. 安装依赖
 npm install
@@ -165,7 +173,7 @@ git merge feature/新功能名称
 git pull origin main
 
 # 2. 创建功能分支（可选，小修改可直接在main分支）
-git checkout -b feature/更新产品信息
+git checkout -b feature/更新内容
 
 # 3. 进行代码修改
 # ... 在 Cursor 中编辑代码 ...
@@ -176,10 +184,10 @@ npm run dev
 
 # 5. 提交修改
 git add .
-git commit -m "更新产品信息：添加GPU服务器规格详情"
+git commit -m "更新网站内容"
 
 # 6. 推送到 GitHub
-git push origin main  # 或 git push origin feature/更新产品信息
+git push origin main  # 或 git push origin feature/更新内容
 
 # 7. Vercel 会自动检测推送并部署
 ```
@@ -304,19 +312,16 @@ vercel --prod
 
 ## 📞 联系方式
 
-| 类型 | 邮箱 |
-|------|------|
-| 售后服务 | service@coray.tech |
-| 项目咨询 | info@coray.tech |
-| 商务合作 | dennis.y@coray.tech |
+访问官网了解更多：[https://www.molycure.tech/](https://www.molycure.tech/)
+
+GitHub 仓库：[https://github.com/htzlai/molycure.tech-ai-site](https://github.com/htzlai/molycure.tech-ai-site)
 
 ## 🏢 公司信息
 
-- **公司名称**: Chengdu Coray Times Tech Co.,Ltd
-- **中文名称**: 成都科瑞时代科技有限公司
-- **简称**: Coray Tech / 科瑞时代
-- **成立时间**: 2017年
-- **公司地址**: 成都市高新区
+- **公司名称**: Molycure
+- **中文名称**: 魔力奇
+- **定位**: AI智能体全球出海解决方案
+- **服务地区**: 新加坡及全球市场
 
 ## 🆘 常见问题
 
@@ -360,4 +365,4 @@ git push origin main
 
 ## 📄 许可证
 
-© 2017-2026 成都科瑞时代科技有限公司. 保留所有权利.
+© 2026 Molycure. All rights reserved.

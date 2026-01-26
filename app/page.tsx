@@ -33,67 +33,43 @@ export default function Home() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // 核心产品与方案 - 6个
+  // 核心服务 - 4个
   const products = [
     {
-      icon: Server,
-      title: 'AI服务器',
-      description: '支持国产CPU及Intel、AMD多架构，DDR5/DDR4全规格存储适配，满足信创与高性能计算需求',
-      color: 'bg-blue-500',
-      category: '硬件产品',
-      specs: {
-        scenes: ['图形渲染', '搜索推荐'],
-        gpuTypes: ['A10', 'L20'],
-        families: ['vgn7i-vms', 'sgn7i-vms', 'sgn8ia', 'gn8ia']
-      }
+      icon: Target,
+      title: '品牌与市场',
+      description: '基于公开数据、社交声量与行业报告，快速建立目标区域的机会图谱和品牌定位建议',
+      color: 'bg-[#00E06B]',
+      category: '市场洞察'
     },
     {
-      icon: Cpu,
-      title: 'GPU服务器',
-      description: '专为AI训练与推理优化，支持算力密集型应用，提供强劲的深度学习计算能力',
-      color: 'bg-purple-500',
-      category: '硬件产品',
-      specs: {
-        scenes: ['图像识别', '模型推理 7-30B', '模型推理 30-70B', '模型推理 70B-100B+'],
-        gpuTypes: ['T4', 'A10', 'V100', 'L20'],
-        families: ['gn6i', 'gn7i', 'gn6e', 'gn6v', 'ebmgn7ix', 'ebmgn6v', 'ebmgn8is']
-      }
+      icon: Users,
+      title: '获客与沟通',
+      description: '多语种外联、站内外客服与社媒私信统一由智能体协同处理，保证语气统一、合规可控',
+      color: 'bg-[#00C29E]',
+      category: '智能拓客'
     },
     {
-      icon: Network,
-      title: '智能交换机',
-      description: '高性能网络设备，构建稳定可靠的数据中心网络基础设施',
-      color: 'bg-cyan-500',
-      category: '硬件产品'
+      icon: Sparkles,
+      title: '实时看板',
+      description: '一眼看到每个市场的线索、转化与风险提示，24/7智能体在线',
+      color: 'bg-[#00A9B0]',
+      category: '数据协同'
     },
     {
-      icon: GraduationCap,
-      title: '智慧教育',
-      description: '融合AI技术打造智慧校园、智能教学解决方案，助力教育数字化转型',
-      color: 'bg-green-500',
-      category: '行业方案'
-    },
-    {
-      icon: Stethoscope,
-      title: '智能医疗',
-      description: '智能诊断、数据分析等医疗AI应用，赋能医疗行业智能化升级',
-      color: 'bg-red-500',
-      category: '行业方案'
-    },
-    {
-      icon: Zap,
-      title: '电力通信智能化',
-      description: '电力运维智能化、通信网络优化，精准匹配行业应用场景',
-      color: 'bg-orange-500',
-      category: '行业方案'
+      icon: Rocket,
+      title: '适用场景',
+      description: '适用于 B2B SaaS、跨境电商与高客单制造企业的全球化拓展',
+      color: 'bg-[#00E06B]',
+      category: '行业应用'
     }
   ]
 
   const stats = [
-    { number: '2017', label: '成立年份', icon: Target },
-    { number: '500+', label: '服务客户', icon: Rocket },
-    { number: '4+', label: '行业深耕', icon: Users },
-    { number: '24/7', label: '技术支持', icon: Sparkles }
+    { number: '2.1x', label: '线索转化效率提升', icon: Target },
+    { number: '4-8周', label: '典型方案落地周期', icon: Rocket },
+    { number: '30-40%', label: '节省一线人力成本', icon: Users },
+    { number: '100+', label: '支持多语种沟通', icon: Sparkles }
   ]
 
   return (
@@ -107,7 +83,7 @@ export default function Home() {
       <nav 
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled 
-            ? 'bg-gray-900/95 backdrop-blur-md shadow-lg shadow-blue-500/10' 
+            ? 'bg-white/95 backdrop-blur-md shadow-lg shadow-[#00E06B]/10' 
             : 'bg-transparent'
         }`}
       >
@@ -115,35 +91,35 @@ export default function Home() {
           <div className="flex justify-between items-center h-16 md:h-20">
             {/* Logo */}
             <div className="flex items-center space-x-2">
-              <img src="/logo.png" alt="Coray Tech Logo" className="w-10 h-10 rounded-lg" />
+              <img src="/logo.png" alt="Molycure Logo" className="w-10 h-10 rounded-lg" />
               <div className="hidden sm:block">
-                <div className="text-lg font-bold text-white">Coray Tech</div>
-                <div className="text-xs text-blue-300">科瑞时代科技</div>
+                <div className="text-lg font-bold text-black">Molycure</div>
+                <div className="text-xs text-[#00C29E]">魔力奇</div>
               </div>
             </div>
 
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#home" className="text-gray-200 hover:text-blue-400 transition-colors font-medium">
+              <a href="#home" className="text-[#555555] hover:text-[#00E06B] transition-colors font-medium">
                 首页
               </a>
-              <a href="#products" className="text-gray-200 hover:text-blue-400 transition-colors font-medium">
+              <a href="#products" className="text-[#555555] hover:text-[#00E06B] transition-colors font-medium">
                 产品方案
               </a>
-              <a href="#about" className="text-gray-200 hover:text-blue-400 transition-colors font-medium">
+              <a href="#about" className="text-[#555555] hover:text-[#00E06B] transition-colors font-medium">
                 关于我们
               </a>
-              <a href="#contact" className="text-gray-200 hover:text-blue-400 transition-colors font-medium">
+              <a href="#contact" className="text-[#555555] hover:text-[#00E06B] transition-colors font-medium">
                 联系我们
               </a>
-              <a href="mailto:dennis.y@coray.tech" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300 hover:scale-105">
-                商务合作
+              <a href="#contact" className="bg-gradient-to-r from-[#00E06B] to-[#00C29E] text-white px-6 py-2 rounded-lg hover:shadow-lg hover:shadow-[#00E06B]/30 transition-all duration-300 hover:scale-105">
+                联系我们
               </a>
             </div>
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-2 rounded-lg text-white hover:bg-white/10 transition-colors"
+              className="md:hidden p-2 rounded-lg text-black hover:bg-[#00E06B]/10 transition-colors"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -153,22 +129,22 @@ export default function Home() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-gray-900/95 backdrop-blur-md border-t border-gray-700 animate-slide-up">
+          <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-[#E0E0E0] animate-slide-up">
             <div className="px-4 py-4 space-y-3">
-              <a href="#home" className="block py-2 text-gray-200 hover:text-blue-400 transition-colors">
+              <a href="#home" className="block py-2 text-[#555555] hover:text-[#00E06B] transition-colors">
                 首页
               </a>
-              <a href="#products" className="block py-2 text-gray-200 hover:text-blue-400 transition-colors">
+              <a href="#products" className="block py-2 text-[#555555] hover:text-[#00E06B] transition-colors">
                 产品方案
               </a>
-              <a href="#about" className="block py-2 text-gray-200 hover:text-blue-400 transition-colors">
+              <a href="#about" className="block py-2 text-[#555555] hover:text-[#00E06B] transition-colors">
                 关于我们
               </a>
-              <a href="#contact" className="block py-2 text-gray-200 hover:text-blue-400 transition-colors">
+              <a href="#contact" className="block py-2 text-[#555555] hover:text-[#00E06B] transition-colors">
                 联系我们
               </a>
-              <a href="mailto:dennis.y@coray.tech" className="block w-full text-center bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all">
-                商务合作
+              <a href="#contact" className="block w-full text-center bg-gradient-to-r from-[#00E06B] to-[#00C29E] text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all">
+                联系我们
               </a>
             </div>
           </div>
@@ -182,35 +158,35 @@ export default function Home() {
             <div className="mb-8">
               {/* 中文标语 - 流光效果 */}
               <div className="text-xl md:text-2xl font-medium tracking-wide mb-3">
-                <span className="bg-gradient-to-r from-gray-300 via-blue-400 to-gray-300 bg-[length:200%_auto] animate-shimmer bg-clip-text text-transparent">
-                  构建可靠硬件，释放行业智能
+                <span className="bg-gradient-to-r from-[#555555] via-[#00E06B] to-[#555555] bg-[length:200%_auto] animate-shimmer bg-clip-text text-transparent">
+                  新加坡 · AI智能体出海
                 </span>
               </div>
               {/* 英文标语 - 流光效果 */}
               <div className="text-sm md:text-base tracking-wider">
-                <span className="bg-gradient-to-r from-gray-500 via-cyan-400 to-gray-500 bg-[length:200%_auto] animate-shimmer bg-clip-text text-transparent font-medium" style={{ animationDelay: '1.5s' }}>
-                  Building reliable hardware. Enabling industry intelligence.
+                <span className="bg-gradient-to-r from-[#555555] via-[#00C29E] to-[#555555] bg-[length:200%_auto] animate-shimmer bg-clip-text text-transparent font-medium" style={{ animationDelay: '1.5s' }}>
+                  AI Agents for Global Expansion
                 </span>
               </div>
             </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              AI+硬件集成
-              <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-                创新科技企业
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-black mb-6 leading-tight">
+              魔力奇 · AI智能体
+              <span className="bg-gradient-to-r from-[#00E06B] via-[#00C29E] to-[#00A9B0] bg-clip-text text-transparent">
+                × 全球出海
               </span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-              以计算机硬件与网络设备为核心根基，深度赋能教育、医疗、电力、通信等行业数字化转型
+            <p className="text-lg md:text-xl text-[#555555] mb-12 max-w-4xl mx-auto leading-relaxed">
+              基于AI智能体，助力企业高效出海
               <br className="hidden md:block" />
-              提供"硬件选型-软件适配-方案设计-部署实施"全链条智能应用解决方案
+              依托大模型与智能体技术，提供市场洞察、智能拓客、多语种沟通、合规风控与运营协同一站式解决方案
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a href="mailto:info@coray.tech" className="group bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-300 hover:scale-105 flex items-center gap-2">
-                项目咨询
+              <a href="#contact" className="group bg-gradient-to-r from-[#00E06B] to-[#00C29E] text-white px-8 py-4 rounded-xl text-lg font-semibold hover:shadow-2xl hover:shadow-[#00E06B]/30 transition-all duration-300 hover:scale-105 flex items-center gap-2">
+                了解解决方案
                 <ChevronRight className="group-hover:translate-x-1 transition-transform" size={20} />
               </a>
-              <a href="#products" className="px-8 py-4 rounded-xl text-lg font-semibold border-2 border-gray-500 text-gray-200 hover:border-blue-500 hover:text-blue-400 transition-all duration-300">
-                了解产品
+              <a href="#products" className="px-8 py-4 rounded-xl text-lg font-semibold border-2 border-[#E0E0E0] text-[#555555] hover:border-[#00E06B] hover:text-[#00E06B] transition-all duration-300">
+                核心服务
               </a>
             </div>
           </div>
@@ -220,13 +196,13 @@ export default function Home() {
             {stats.map((stat, index) => (
               <div 
                 key={index}
-                className="bg-gray-900/60 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/10"
+                className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-[#E0E0E0] hover:border-[#00E06B]/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#00E06B]/10"
               >
-                <stat.icon className="w-8 h-8 mx-auto mb-3 text-blue-400" />
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">
+                <stat.icon className="w-8 h-8 mx-auto mb-3 text-[#00E06B]" />
+                <div className="text-3xl md:text-4xl font-bold text-black mb-2">
                   {stat.number}
                 </div>
-                <div className="text-gray-400 text-sm md:text-base">
+                <div className="text-[#555555] text-sm md:text-base">
                   {stat.label}
                 </div>
               </div>
@@ -236,81 +212,40 @@ export default function Home() {
       </section>
 
       {/* Products Section */}
-      <section id="products" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent via-gray-900/80 to-gray-900/90">
+      <section id="products" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent via-white/50 to-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              核心产品与方案
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+              一站式出海服务
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              全场景硬件矩阵 + 行业AI落地，为您提供端到端的智能化解决方案
+            <p className="text-xl text-[#555555] max-w-3xl mx-auto">
+              从市场洞察到运营协同，用一套智能体系统跑通出海全流程
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {products.map((product, index) => (
               <div
                 key={index}
-                className="group bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:-translate-y-2 cursor-pointer hover:shadow-xl hover:shadow-blue-500/10"
+                className="group bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-[#E0E0E0] hover:border-[#00E06B]/50 transition-all duration-300 hover:-translate-y-2 cursor-pointer hover:shadow-xl hover:shadow-[#00E06B]/10"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="flex items-center justify-between mb-4">
                   <div className={`${product.color} w-14 h-14 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
                     <product.icon className="text-white" size={28} />
                   </div>
-                  <span className="text-xs text-gray-500 bg-gray-700/50 px-3 py-1 rounded-full">
+                  <span className="text-xs text-[#555555] bg-[#E9E9E9] px-3 py-1 rounded-full">
                     {product.category}
                   </span>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
+                <h3 className="text-xl font-bold text-black mb-3 group-hover:text-[#00E06B] transition-colors">
                   {product.title}
                 </h3>
-                <p className="text-gray-400 leading-relaxed mb-4">
+                <p className="text-[#555555] leading-relaxed mb-4">
                   {product.description}
                 </p>
                 
-                {/* GPU规格信息 - 仅AI服务器和GPU服务器显示 */}
-                {product.specs && (
-                  <div className="mt-4 pt-4 border-t border-gray-700/50 space-y-3">
-                    <div>
-                      <div className="text-xs text-gray-500 mb-2">适用场景</div>
-                      <div className="flex flex-wrap gap-1.5">
-                        {product.specs.scenes.map((scene, i) => (
-                          <span key={i} className="text-xs px-2 py-1 bg-gray-700/60 text-gray-300 rounded">
-                            {scene}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    <div>
-                      <div className="text-xs text-gray-500 mb-2">GPU卡型</div>
-                      <div className="flex flex-wrap gap-1.5">
-                        {product.specs.gpuTypes.map((gpu, i) => (
-                          <span key={i} className="text-xs px-2 py-1 bg-blue-900/40 text-blue-300 rounded font-mono">
-                            {gpu}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    <div>
-                      <div className="text-xs text-gray-500 mb-2">规格族</div>
-                      <div className="flex flex-wrap gap-1.5">
-                        {product.specs.families.slice(0, 4).map((family, i) => (
-                          <span key={i} className="text-xs px-2 py-1 bg-gray-700/40 text-gray-400 rounded font-mono">
-                            {family}
-                          </span>
-                        ))}
-                        {product.specs.families.length > 4 && (
-                          <span className="text-xs px-2 py-1 text-gray-500">
-                            +{product.specs.families.length - 4}
-                          </span>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                )}
-                
-                <div className="mt-4 flex items-center text-blue-400 font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="mt-4 flex items-center text-[#00E06B] font-medium opacity-0 group-hover:opacity-100 transition-opacity">
                   了解详情
                   <ChevronRight size={18} className="ml-1 group-hover:translate-x-1 transition-transform" />
                 </div>
@@ -318,18 +253,21 @@ export default function Home() {
             ))}
           </div>
 
-          {/* 服务流程 */}
-          <div className="mt-20 bg-gray-800/30 rounded-3xl p-8 md:p-12 border border-gray-700/50">
-            <h3 className="text-2xl md:text-3xl font-bold text-white text-center mb-10">
-              全链条服务流程
+          {/* 核心优势 */}
+          <div className="mt-20 bg-white/80 rounded-3xl p-8 md:p-12 border border-[#E0E0E0]">
+            <h3 className="text-2xl md:text-3xl font-bold text-black text-center mb-10">
+              我们关注每一次出海尝试的实际结果，用数据说话
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {['硬件选型', '软件适配', '方案设计', '部署实施'].map((step, index) => (
+              {[
+                { icon: '🤖', label: 'AI智能体技术' },
+                { icon: '🌍', label: '全球市场覆盖' },
+                { icon: '🚀', label: '高效低成本' },
+                { icon: '💼', label: '数据驱动决策' }
+              ].map((item, index) => (
                 <div key={index} className="text-center">
-                  <div className="w-12 h-12 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
-                    {index + 1}
-                  </div>
-                  <div className="text-white font-semibold">{step}</div>
+                  <div className="text-4xl mb-4">{item.icon}</div>
+                  <div className="text-black font-semibold">{item.label}</div>
                 </div>
               ))}
             </div>
@@ -338,42 +276,42 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/90">
+      <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                关于科瑞时代
+              <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
+                关于魔力奇
               </h2>
-              <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                成都科瑞时代科技有限公司（2017年成立），是专注于AI+硬件集成的创新科技企业。以计算机硬件与网络设备为核心根基，深度赋能教育、医疗、电力、通信等行业数字化转型。
+              <p className="text-lg text-[#555555] mb-6 leading-relaxed">
+                魔力奇是一家基于人工智能的智能体项目，专注帮助企业高效出海。我们相信，像农夫山泉强调"水源地"，魔力奇强调的是"数据与智能体"。
               </p>
-              <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                <span className="text-white font-medium">专业团队支撑：</span>核心成员具备多年硬件架构设计与行业AI方案落地经验，精通多架构硬件优化、智能系统协同调试，深度理解本地行业需求，提供全流程闭环服务。
+              <p className="text-lg text-[#555555] mb-6 leading-relaxed">
+                <span className="text-black font-medium">数据驱动决策：</span>我们以真实数据驱动决策，用可解释的智能体编排替代零散工具，帮助团队看清每一次投放、每一封邮件、每一通外呼背后的效果。
               </p>
-              <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                <span className="text-white font-medium">立足本地，服务全球。</span>科瑞时代以可靠品质与高效响应赢得行业认可，未来将持续深耕AI与数字化转型融合创新，成为区域行业智能化升级的可靠伙伴，并面向全球提供供应链服务。
+              <p className="text-lg text-[#555555] mb-8 leading-relaxed">
+                <span className="text-black font-medium">全球化视野：</span>依托大模型与智能体技术，为企业提供市场洞察、智能拓客、多语种沟通、合规风控与运营协同，助力企业低成本进入全球市场，提升获客效率与转化效果。
               </p>
-              <a href="mailto:dennis.y@coray.tech" className="inline-block bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-xl font-semibold hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-300 hover:scale-105">
-                商务合作
+              <a href="#contact" className="inline-block bg-gradient-to-r from-[#00E06B] to-[#00C29E] text-white px-8 py-3 rounded-xl font-semibold hover:shadow-xl hover:shadow-[#00E06B]/30 transition-all duration-300 hover:scale-105">
+                了解更多
               </a>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-gray-600 transition-all">
-                <div className="text-white font-bold text-3xl mb-2">8年+</div>
-                <div className="text-gray-400">行业深耕</div>
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-[#E0E0E0] hover:border-[#00E06B] transition-all">
+                <div className="text-black font-bold text-3xl mb-2">2.1x</div>
+                <div className="text-[#555555]">转化效率提升</div>
               </div>
-              <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-gray-600 transition-all">
-                <div className="text-white font-bold text-3xl mb-2">多架构</div>
-                <div className="text-gray-400">硬件支持</div>
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-[#E0E0E0] hover:border-[#00E06B] transition-all">
+                <div className="text-black font-bold text-3xl mb-2">4-8周</div>
+                <div className="text-[#555555]">方案落地周期</div>
               </div>
-              <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-gray-600 transition-all">
-                <div className="text-white font-bold text-3xl mb-2">4+行业</div>
-                <div className="text-gray-400">深度覆盖</div>
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-[#E0E0E0] hover:border-[#00E06B] transition-all">
+                <div className="text-black font-bold text-3xl mb-2">30-40%</div>
+                <div className="text-[#555555]">节省人力成本</div>
               </div>
-              <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-gray-600 transition-all">
-                <div className="text-white font-bold text-3xl mb-2">面向全球</div>
-                <div className="text-gray-400">区域服务</div>
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-[#E0E0E0] hover:border-[#00E06B] transition-all">
+                <div className="text-black font-bold text-3xl mb-2">100+</div>
+                <div className="text-[#555555]">多语种支持</div>
               </div>
             </div>
           </div>
@@ -381,96 +319,88 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/95">
+      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-[#F5F5F5]">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            开启合作之旅
+          <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
+            开启全球化之旅
           </h2>
-          <p className="text-xl text-gray-400 mb-12">
-            让我们一起探讨如何通过AI+硬件集成推动您的业务智能化升级
+          <p className="text-xl text-[#555555] mb-12">
+            让我们一起探讨如何通过AI智能体助力您的企业高效出海
           </p>
-          <div className="bg-gradient-to-br from-blue-600 to-purple-700 rounded-3xl p-8 md:p-12 text-white shadow-2xl shadow-blue-500/20">
-            <div className="grid md:grid-cols-3 gap-8 text-left">
-              <div className="text-center md:text-left">
-                <div className="flex items-center justify-center md:justify-start gap-2 mb-3">
-                  <Briefcase className="w-5 h-5" />
-                  <h3 className="text-lg font-bold">商务合作</h3>
+          <div className="bg-gradient-to-br from-[#00E06B] to-[#00A9B0] rounded-3xl p-8 md:p-12 text-white shadow-2xl shadow-[#00E06B]/20">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold mb-4">查看典型出海方案</h3>
+              <p className="text-white/90 text-lg mb-6">适用于 B2B SaaS、跨境电商与高客单制造企业</p>
+              <div className="grid md:grid-cols-2 gap-6 text-left">
+                <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6">
+                  <div className="flex items-center gap-2 mb-3">
+                    <Target className="w-5 h-5" />
+                    <h4 className="text-lg font-bold">市场洞察</h4>
+                  </div>
+                  <p className="text-white/90 text-sm">基于数据分析快速建立目标区域机会图谱</p>
                 </div>
-                <a href="mailto:dennis.y@coray.tech" className="text-blue-200 hover:text-white transition-colors">
-                  dennis.y@coray.tech
-                </a>
-              </div>
-              <div className="text-center md:text-left">
-                <div className="flex items-center justify-center md:justify-start gap-2 mb-3">
-                  <Phone className="w-5 h-5" />
-                  <h3 className="text-lg font-bold">项目咨询</h3>
+                <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6">
+                  <div className="flex items-center gap-2 mb-3">
+                    <Users className="w-5 h-5" />
+                    <h4 className="text-lg font-bold">智能拓客</h4>
+                  </div>
+                  <p className="text-white/90 text-sm">多语种智能体协同处理客户沟通</p>
                 </div>
-                <a href="mailto:info@coray.tech" className="text-blue-200 hover:text-white transition-colors">
-                  info@coray.tech
-                </a>
-              </div>
-              <div className="text-center md:text-left">
-                <div className="flex items-center justify-center md:justify-start gap-2 mb-3">
-                  <Mail className="w-5 h-5" />
-                  <h3 className="text-lg font-bold">售后服务</h3>
-                </div>
-                <a href="mailto:service@coray.tech" className="text-blue-200 hover:text-white transition-colors">
-                  service@coray.tech
-                </a>
               </div>
             </div>
             <div className="mt-8 pt-8 border-t border-white/20 text-center">
-              <p className="text-blue-100">📍 成都市高新区 · 立足本地，服务全球</p>
+              <p className="text-white/90 mb-4">📍 新加坡 · AI智能体出海解决方案</p>
+              <p className="text-sm text-white/80">24/7 智能体在线 · 实时看板监控</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-950 text-gray-400 py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-800">
+      <footer className="bg-white text-[#555555] py-12 px-4 sm:px-6 lg:px-8 border-t border-[#E0E0E0]">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <img src="/logo.png" alt="Coray Tech Logo" className="w-10 h-10 rounded-lg" />
+                <img src="/logo.png" alt="Molycure Logo" className="w-10 h-10 rounded-lg" />
                 <div>
-                  <div className="text-white font-bold">Coray Tech</div>
-                  <div className="text-xs text-gray-500">科瑞时代科技</div>
+                  <div className="text-black font-bold">Molycure</div>
+                  <div className="text-xs text-[#555555]">魔力奇</div>
                 </div>
               </div>
-              <p className="text-sm text-gray-500">
-                构建可靠硬件，释放行业智能
+              <p className="text-sm text-[#555555]">
+                AI智能体全球出海解决方案
                 <br />
-                让AI落地每一个行业场景
+                助力企业高效拓展全球市场
               </p>
             </div>
             <div>
-              <h4 className="text-white font-semibold mb-4">硬件产品</h4>
+              <h4 className="text-black font-semibold mb-4">核心服务</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#products" className="hover:text-blue-400 transition-colors">AI服务器</a></li>
-                <li><a href="#products" className="hover:text-blue-400 transition-colors">GPU服务器</a></li>
-                <li><a href="#products" className="hover:text-blue-400 transition-colors">智能交换机</a></li>
+                <li><a href="#products" className="hover:text-[#00E06B] transition-colors">品牌与市场</a></li>
+                <li><a href="#products" className="hover:text-[#00E06B] transition-colors">获客与沟通</a></li>
+                <li><a href="#products" className="hover:text-[#00E06B] transition-colors">实时看板</a></li>
               </ul>
             </div>
             <div>
-              <h4 className="text-white font-semibold mb-4">行业方案</h4>
+              <h4 className="text-black font-semibold mb-4">适用场景</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#products" className="hover:text-blue-400 transition-colors">智慧教育</a></li>
-                <li><a href="#products" className="hover:text-blue-400 transition-colors">智能医疗</a></li>
-                <li><a href="#products" className="hover:text-blue-400 transition-colors">电力通信智能化</a></li>
+                <li><a href="#products" className="hover:text-[#00E06B] transition-colors">B2B SaaS</a></li>
+                <li><a href="#products" className="hover:text-[#00E06B] transition-colors">跨境电商</a></li>
+                <li><a href="#products" className="hover:text-[#00E06B] transition-colors">高客单制造</a></li>
               </ul>
             </div>
             <div>
-              <h4 className="text-white font-semibold mb-4">联系我们</h4>
+              <h4 className="text-black font-semibold mb-4">关于我们</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="mailto:dennis.y@coray.tech" className="hover:text-blue-400 transition-colors">商务合作</a></li>
-                <li><a href="mailto:info@coray.tech" className="hover:text-blue-400 transition-colors">项目咨询</a></li>
-                <li><a href="mailto:service@coray.tech" className="hover:text-blue-400 transition-colors">售后服务</a></li>
+                <li><a href="#about" className="hover:text-[#00E06B] transition-colors">公司介绍</a></li>
+                <li><a href="#contact" className="hover:text-[#00E06B] transition-colors">联系我们</a></li>
+                <li><a href="https://github.com/htzlai/molycure.tech-ai-site" target="_blank" rel="noopener noreferrer" className="hover:text-[#00E06B] transition-colors">GitHub</a></li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-gray-800 pt-8 text-center text-sm">
-            <p className="text-gray-500">© 2017-2026 Chengdu Coray Times Tech Co.,Ltd. All rights reserved.</p>
+          <div className="border-t border-[#E0E0E0] pt-8 text-center text-sm">
+            <p className="text-[#555555]">© 2026 Molycure. All rights reserved. 新加坡 · AI智能体出海</p>
           </div>
         </div>
       </footer>
